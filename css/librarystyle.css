@@ -1,0 +1,181 @@
+﻿/* http://www.colorcombos.com/color-schemes/20/ColorCombo20.html */
+/* http://www.aspsnippets.com/Articles/Using-ASPNet-Menu-control-with-example-in-C-and-VBNet.aspx */
+
+body {
+	font: 1em/150% Arial, Helvetica, sans-serif;
+    background-color:#9A3334;
+}
+
+h1 {
+	font: bold 36px/100% Arial, Helvetica, sans-serif;
+    color:#217C7E;
+    display:inline-block;
+}
+
+.hdr_img {
+    margin:0;
+    padding:10px;
+    border:0;
+    display:inline-block;
+    float:right;
+}
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+    background-color:white;
+}
+#header {
+	height: 180px;
+    background-color:#F3EFE0;
+}
+#content {
+	width: 600px;
+	float: left;
+}
+#sidebar {
+	width: 300px;
+	float: right;
+}
+#footer {
+	clear: both;
+    background-color:#F3EFE0;
+    color:#217C7E;
+}
+
+/************************************************************************************
+BORDER & GUIDELINE
+*************************************************************************************/
+#content {
+	background: #f8f8f8;
+}
+#sidebar {
+	background: #f0efef;
+}
+#header, #content, #sidebar {
+	margin-bottom: 5px;
+}
+#pagewrap, #header, #content, #sidebar, #footer {
+	border: solid 1px #ccc;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+    #date {
+    visibility:hidden;
+    display:none;
+    }
+
+    #menu {
+    display:none;
+    width:100%;
+    }
+}
+
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+    #date {
+    visibility:hidden;
+    display:none;
+    }
+    #menu {
+    display:none;
+    width:100%;
+    }
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	#header {
+		height: auto;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	#sidebar {
+		display: none;
+	}
+    #date {
+    visibility:hidden;
+    display:none;
+    }
+}
+
+
+/************************************************************************************
+DATE
+*************************************************************************************/
+#date {
+    background:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    width:209px;
+    height:0px;
+    display:inline-block;
+    float:right;
+    }
+
+
+/************************************************************************************
+MENU
+*************************************************************************************/
+#menu {
+    display:inline-block;
+    padding: 5px 5px 10px 5px;
+}
+
+.main_menu
+    {
+        width: 100px;
+        background-color:#efefef;
+        color:#3399FF;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+        background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	    background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+        box-shadow: 1px 1px 3px 2px #888888;
+    }
+.level_menu
+    {
+        width: 110px;
+        background-color:#6e7277;
+        color: #fff;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 5px;
+    }
+.selected
+    {
+        background-color:#6e7277;
+        color:#3399FF;
+    }
