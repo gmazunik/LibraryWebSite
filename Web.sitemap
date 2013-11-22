@@ -1,21 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 <siteMapNode url="" title="."  description="" >
-    
+  
+  <!-- use url="javascript:;" for placeholder text in root menu bar -->
+  
   <siteMapNode url="~/default.aspx" title="Home"  description="" />
         
-    <siteMapNode url="~/admin/default.aspx" title="Admin"  description="" >
-        <siteMapNode url="add.aspx" title="Add Item"  description="" />
-        <siteMapNode url="delete.aspx" title="Delete Item"  description="" />
-     </siteMapNode>
-        
-     <siteMapNode url="javascript:;" title="Sales"  description="" >
-        <siteMapNode url="~/sales/default.aspx" title="Add Item"  description="" />
-     </siteMapNode>
-        
-     <siteMapNode url="about.aspx" title="About"  description="" />
+    <siteMapNode url="~/librarians/default.aspx" title="Librarians"  description="" >
+        <siteMapNode url="~/librarians/addMaterial.aspx" title="Add Material"  description="" />
+        <siteMapNode url="~/librarians/addPatron.aspx" title="Add Patron"  description="" />
+        <siteMapNode url="~/librarians/checkIn.aspx" title="Check In Material"  description="" />
+        <siteMapNode url="~/librarians/checkOut.aspx" title="Check Out Material"  description="" />
+    </siteMapNode>
      
-     <siteMapNode url="contact.aspx" title="Contact"  description="" />
+    <siteMapNode url="~/patrons/default.aspx" title="Patrons"  description="" >
+        <siteMapNode url="javascript:;" title="My Profile"  description="" />
+        <siteMapNode url="~/patrons/ViewAllMaterials.aspx" title="View All Materials"  description="" />
+    </siteMapNode>
+        
+    <siteMapNode url="about.aspx" title="About"  description="" />
+     
+    <siteMapNode url="contact.aspx" title="Contact"  description="" />
     
     </siteMapNode>
 </siteMap>

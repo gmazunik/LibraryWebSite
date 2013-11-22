@@ -34,19 +34,16 @@
         </div>
 
         <div id="content">
-          <h2>Content</h2>	
-		        <p>text</p>
-		        <p>text</p>
-		        <p>text</p>
-		        <p>text</p>
-		        <p>text</p>
-		        <p>text</p>
-		        <p>text</p>
-		        <p>text</p>
-		        <p>text</p>
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-		        
-
+		        <h2>Content</h2>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
             </asp:ContentPlaceHolder>
         </div>
 
