@@ -7,9 +7,10 @@
   <siteMapNode url="~/default.aspx" title="Home"  description="" />
         
     <siteMapNode url="~/librarians/default.aspx" title="Librarians"  description="" >
-        <siteMapNode url="~/librarians/addMaterial.aspx" title="Add Material"  description="" />
-        <siteMapNode url="~/librarians/addPatron.aspx" title="Add Patron"  description="" />
+        <siteMapNode url="~/librarians/AddNewMaterial.aspx" title="Add Material"  description="" />
         <siteMapNode url="~/librarians/ViewAllMaterials.aspx" title="View All Materials"  description="" />
+        <siteMapNode url="~/librarians/AddPatron.aspx" title="Add Patron"  description="" />
+        <siteMapNode url="~/librarians/ViewAllPatrons.aspx" title="View All Patrons"  description="" />
         <siteMapNode url="~/librarians/checkIn.aspx" title="Check In Material"  description="" />
         <siteMapNode url="~/librarians/checkOut.aspx" title="Check Out Material"  description="" />
     </siteMapNode>
