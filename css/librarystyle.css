@@ -75,7 +75,8 @@ MEDIA QUERIES
 		width: 65%;
 	}
 	#sidebar {
-		width: 30%;
+    visibility:hidden;
+    display:none;
 	}
     #date {
     visibility:hidden;
@@ -152,7 +153,7 @@ MENU
 
 .main_menu
     {
-        width: 100px;
+        width: 120px;
         background-color:#efefef;
         color:#3399FF;
         text-align: center;
@@ -163,16 +164,19 @@ MENU
 	    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
 	    background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
         box-shadow: 1px 1px 3px 2px #888888;
+       
     }
 .level_menu
     {
-        width: 110px;
+        width:120px;
         background-color:#6e7277;
         color: #fff;
         text-align: center;
         height: 30px;
         line-height: 30px;
         margin-top: 5px;
+        z-index:auto;
+        padding: 2px; 
     }
 .selected
     {

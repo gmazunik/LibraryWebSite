@@ -5,6 +5,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
+    <h2>Welcome to the library! </h2>
 </asp:Content>
 

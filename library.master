@@ -35,22 +35,13 @@
 
         <div id="content">
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-		        <h2>Content</h2>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
+
             </asp:ContentPlaceHolder>
         </div>
 
         <div id="sidebar">
-		     <h3>Twitter</h3>
-		     <p>tweet</p>
-		     <p>tweet</p>
+		    <a class="twitter-timeline" href="https://twitter.com/SDD_Group2" data-widget-id="407216211865264128">Tweets by @SDD_Group2</a>
+                <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
 	    </div>           
 
         <div id="footer">
