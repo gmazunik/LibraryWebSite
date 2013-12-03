@@ -53,52 +53,53 @@
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
         <InsertItemTemplate>
-            RoleName:
+            <tr>
+            <td>Role:</td>
             <asp:TextBox ID="RoleNameTextBox" runat="server" Text='<%# Bind("RoleName") %>' />
-            <br />
-            UserName:
+            </ tr><tr>
+            <td>Username:</td>
             <asp:TextBox ID="UserNameTextBox" runat="server" Text='<%# Bind("UserName") %>' />
-            <br />
-            FirstName:
+            </ tr><tr>
+            <td>First Name:</td>
             <asp:TextBox ID="FirstNameTextBox" runat="server" Text='<%# Bind("FirstName") %>' />
-            <br />
-            LastName:
+            </ tr><tr>
+            <td>Last Name:</td>
             <asp:TextBox ID="LastNameTextBox" runat="server" Text='<%# Bind("LastName") %>' />
-            <br />
-            Birthdate:
+            </ tr><tr>
+            <td>Birthdate:</td>
             <asp:TextBox ID="BirthdateTextBox" runat="server" Text='<%# Bind("Birthdate") %>' />
-            <br />
-            Address1:
+            </ tr><tr>
+            <td>Address Line 1:</td>
             <asp:TextBox ID="Address1TextBox" runat="server" Text='<%# Bind("Address1") %>' />
-            <br />
-            Address2:
+            </ tr><tr>
+            <td>Address Line 2:</td>
             <asp:TextBox ID="Address2TextBox" runat="server" Text='<%# Bind("Address2") %>' />
-            <br />
-            City:
+            </ tr><tr>
+            <td>City:</td>
             <asp:TextBox ID="CityTextBox" runat="server" Text='<%# Bind("City") %>' />
-            <br />
-            State:
+            </ tr><tr>
+            <td>State:</td>
             <asp:TextBox ID="StateTextBox" runat="server" Text='<%# Bind("State") %>' />
-            <br />
-            Zip:
+            </ tr><tr>
+            <td>Zip:</td>
             <asp:TextBox ID="ZipTextBox" runat="server" Text='<%# Bind("Zip") %>' />
-            <br />
-            PhoneNumber:
+            </ tr><tr>
+            <td>Phone Number:</td>
             <asp:TextBox ID="PhoneNumberTextBox" runat="server" Text='<%# Bind("PhoneNumber") %>' />
-            <br />
-            PhoneNumber1:
+            </ tr><tr>
+            <td>Alternate Phone:</td>
             <asp:TextBox ID="PhoneNumber1TextBox" runat="server" Text='<%# Bind("PhoneNumber1") %>' />
-            <br />
-            PrimaryEmail:
+            </ tr><tr>
+            <td>Primary Email:</td>
             <asp:TextBox ID="PrimaryEmailTextBox" runat="server" Text='<%# Bind("PrimaryEmail") %>' />
-            <br />
-            UserID:
+            </ tr><tr>
+            <td>UserID:</td>
             <asp:TextBox ID="UserIDTextBox" runat="server" Text='<%# Bind("UserID") %>' />
-            <br />
+            </ tr>
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
-        <ItemTemplate>
+        <ItemTemplate><table>
             RoleName:
             <asp:Label ID="RoleNameLabel" runat="server" Text='<%# Bind("RoleName") %>' />
             <br />
@@ -141,6 +142,13 @@
             UserID:
             <asp:Label ID="UserIDLabel" runat="server" Text='<%# Eval("UserID") %>' />
             <br />
+
+        </table>
+
+            <asp:Button ID="EditButton" runat="server" CausesValidation="false" CommandName="Edit" Text="Edit"/>
+            &nbsp;
+            <asp:Button ID="DeleteButton" runat="server" CausesValidation="false" CommandName="Delete" Text="Delete" 
+                onclick="DeleteButton_Click" onClientClick="return confirm ('Are you sure you want to delete this patron record?')"/>
 
         </ItemTemplate>
     </asp:FormView>
