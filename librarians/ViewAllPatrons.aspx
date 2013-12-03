@@ -19,6 +19,7 @@
             <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
             <asp:BoundField DataField="PhoneNumber1" HeaderText="PhoneNumber1" SortExpression="PhoneNumber1" />
             <asp:BoundField DataField="PrimaryEmail" HeaderText="PrimaryEmail" SortExpression="PrimaryEmail" />
+            <asp:HyperLinkField DataNavigateUrlFields="UserID" DataNavigateUrlFormatString="PatronDetails.aspx?UserID={0}" Text="Select" />
         </Columns>
     </asp:GridView>
 
