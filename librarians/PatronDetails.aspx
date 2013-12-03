@@ -8,10 +8,10 @@
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="UserID" DataSourceID="SqlDataSource1">
         <EditItemTemplate>
             RoleName:
-            <asp:TextBox ID="RoleNameTextBox" runat="server" Text='<%# Bind("RoleName") %>' />
+            <asp:TextBox ID="RoleNameTextBox" runat="server" enabled="false" Text='<%# Bind("RoleName") %>' />
             <br />
             UserName:
-            <asp:TextBox ID="UserNameTextBox" runat="server" Text='<%# Bind("UserName") %>' />
+            <asp:TextBox ID="UserNameTextBox" runat="server" enabled="false" Text='<%# Bind("UserName") %>' />
             <br />
             FirstName:
             <asp:TextBox ID="FirstNameTextBox" runat="server" Text='<%# Bind("FirstName") %>' />
@@ -50,7 +50,8 @@
             <asp:Label ID="UserIDLabel1" runat="server" Text='<%# Eval("UserID") %>' />
             <br />
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            &nbsp;
+            <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </EditItemTemplate>
         <InsertItemTemplate>
             <tr>
@@ -124,11 +125,10 @@
             City:
             <asp:Label ID="CityLabel" runat="server" Text='<%# Bind("City") %>' />
             <br />
-            State:
-            <asp:Label ID="StateLabel" runat="server" Text='<%# Bind("State") %>' />
-            <br />
-            Zip:
-            <asp:Label ID="ZipLabel" runat="server" Text='<%# Bind("Zip") %>' />
+            <asp:DropDownList ID="ddlState" runat="server" DataSourceID="SqlDataSource1"
+                DataTextField="State" DataValueField="State" SelectedValue='<%# Bind("State") %>' />
+            <asp:DropDownList ID="ddlZip" runat="server" DataSourceID="SqlDataSource1"
+                DataTextField="Zip Code" DataValueField="Zip Code" SelectedValue='<%# Bind("Zip")%>' />
             <br />
             PhoneNumber:
             <asp:Label ID="PhoneNumberLabel" runat="server" Text='<%# Bind("PhoneNumber") %>' />
@@ -148,10 +148,43 @@
             <asp:Button ID="EditButton" runat="server" CausesValidation="false" CommandName="Edit" Text="Edit"/>
             &nbsp;
             <asp:Button ID="DeleteButton" runat="server" CausesValidation="false" CommandName="Delete" Text="Delete" 
-                onclick="DeleteButton_Click" onClientClick="return confirm ('Are you sure you want to delete this patron record?')"/>
+                onClick="DeleteButton_Click" onClientClick="return confirm ('Are you sure you want to delete this patron record?')"/>
 
         </ItemTemplate>
     </asp:FormView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT aspnet_Roles.RoleName, aspnet_Users.UserName, SLPL_UserProfile.FirstName, SLPL_UserProfile.LastName, SLPL_UserProfile.Birthdate, SLPL_UserProfile.Address1, SLPL_UserProfile.Address2, SLPL_UserProfile.City, SLPL_UserProfile.State, SLPL_UserProfile.Zip, SLPL_UserProfile.PhoneNumber, SLPL_UserProfile.PhoneNumber1, SLPL_UserProfile.PrimaryEmail, SLPL_UserProfile.UserID FROM SLPL_UserProfile INNER JOIN aspnet_Users ON SLPL_UserProfile.UserID = aspnet_Users.UserId INNER JOIN aspnet_Roles ON aspnet_Users.ApplicationId = aspnet_Roles.ApplicationId"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
+        SelectCommand="SELECT aspnet_Roles.RoleName, aspnet_Users.UserName, SLPL_UserProfile.FirstName, SLPL_UserProfile.LastName, SLPL_UserProfile.Birthdate, SLPL_UserProfile.Address1, SLPL_UserProfile.Address2, SLPL_UserProfile.City, SLPL_UserProfile.State, SLPL_UserProfile.Zip, SLPL_UserProfile.PhoneNumber, SLPL_UserProfile.PhoneNumber1, SLPL_UserProfile.PrimaryEmail, SLPL_UserProfile.UserID FROM SLPL_UserProfile INNER JOIN aspnet_Users ON SLPL_UserProfile.UserID = aspnet_Users.UserId INNER JOIN aspnet_Roles ON aspnet_Users.ApplicationId = aspnet_Roles.ApplicationId"></asp:SqlDataSource>
+
+
+    <br />
+    <asp:Label ID="lbl_DeletedUser" runat="server" Text=""></asp:Label>
+    <br />
+
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>"
+        
+        DeleteCommand="DELETE FROM [SLPL_Users] WHERE [UserID] = @UserID" 
+        
+        InsertCommand="INSERT INTO [SLPL_Users] ([Username], [FirstName], [LastName], [Birthdate], [Address1], [Address2], [City], [State], [Zip], [PhoneNumber], [PhoneNumber1], [PrimaryEmail])
+            VALUES @Username, @FirstName, @LastName, @Birthdate, @Address1, @Address2, @City, @State, @Zip, @PhoneNumber, @PhoneNumber1, @PrimaryEmail" 
+        
+        UpdateCommand="UPDATE [SLPL_Users] SET [FirstName] = @FirstName, [LastName] = @LastName, [Birthdate] = @Birthdate, [Address1] = @Address1, [Address2] = @Address2, [PhoneNumber] = @PhoneNumber, [PhoneNumber1] = @PhoneNumber1, [PrimaryEmail] = @PrimaryEmail WHERE [UserID] = @UserID">
+    
+    <DeleteParameters><asp:Parameter Name="User ID" Type="Object" /></DeleteParameters>
+    <SelectParameters><asp:QueryStringParameter Name="UserID" QueryStringField="UserID" /></SelectParameters>
+    <UpdateParameters>
+        <asp:Parameter Name="FirstName" Type="String" />
+        <asp:Parameter Name="LastName" Type="String" />
+        <asp:Parameter Name="Birthdate" Type="String" />
+        <asp:Parameter Name="Address1" Type="String" />
+        <asp:Parameter Name="Address2" Type="String" />
+        <asp:Parameter Name="City" Type="String" />
+        <asp:Parameter Name="State" />
+        <asp:Parameter Name="Zip" />
+        <asp:Parameter Name="PhoneNumber" Type="String" />
+        <asp:Parameter Name="PhoneNumber1" Type="String" />
+        <asp:Parameter Name="PrimaryEmail" Type="String" />
+        <asp:Parameter Name="UserID" />
+    </UpdateParameters>
+
 </asp:Content>
 
