@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" CodeFile="library.master.vb" Inherits="library" %>
+﻿<%@ Master Language="VB" CodeFile="Default.master.vb" Inherits="library" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="stylesheet" type="text/css" href="~/css/librarystyle.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/defualtstyle.css" />
 </head>
 
 <body>
@@ -38,6 +38,12 @@
 
             </asp:ContentPlaceHolder>
         </div>
+
+        <div id="sidebar">
+		    <a class="twitter-timeline" href="https://twitter.com/SDD_Group2" data-widget-id="407216211865264128">Tweets by @SDD_Group2</a>
+                <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+	    </div>           
+
 
         <div id="footer">
              <h4>Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> South Liberty Public Library</h4>
