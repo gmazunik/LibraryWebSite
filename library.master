@@ -8,6 +8,14 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="~/css/librarystyle.css" />
+
+      <!--[if IE]>
+<style type="text/css">
+	#menu li {
+		position:static;
+	}
+</style>
+<![endif]--> 
 </head>
 
 <body>
@@ -20,11 +28,7 @@
         </div>
 
         <div id="menu">
-        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" OnMenuItemDataBound="OnMenuItemDataBound">
-            <LevelMenuItemStyles>
-                <asp:MenuItemStyle CssClass="main_menu" />
-                <asp:MenuItemStyle CssClass="level_menu" />
-            </LevelMenuItemStyles>
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" >
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
         </div> 
