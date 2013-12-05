@@ -5,186 +5,223 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="UserID" DataSourceID="SqlDataSource1">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="UserID" DataSourceID="SqlDataSource2">
+        
         <EditItemTemplate>
-            RoleName:
-            <asp:TextBox ID="RoleNameTextBox" runat="server" enabled="false" Text='<%# Bind("RoleName") %>' />
-            <br />
-            UserName:
-            <asp:TextBox ID="UserNameTextBox" runat="server" enabled="false" Text='<%# Bind("UserName") %>' />
-            <br />
-            FirstName:
-            <asp:TextBox ID="FirstNameTextBox" runat="server" Text='<%# Bind("FirstName") %>' />
-            <br />
-            LastName:
-            <asp:TextBox ID="LastNameTextBox" runat="server" Text='<%# Bind("LastName") %>' />
-            <br />
-            Birthdate:
-            <asp:TextBox ID="BirthdateTextBox" runat="server" Text='<%# Bind("Birthdate") %>' />
-            <br />
-            Address1:
-            <asp:TextBox ID="Address1TextBox" runat="server" Text='<%# Bind("Address1") %>' />
-            <br />
-            Address2:
-            <asp:TextBox ID="Address2TextBox" runat="server" Text='<%# Bind("Address2") %>' />
-            <br />
-            City:
-            <asp:TextBox ID="CityTextBox" runat="server" Text='<%# Bind("City") %>' />
-            <br />
-            State:
-            <asp:TextBox ID="StateTextBox" runat="server" Text='<%# Bind("State") %>' />
-            <br />
-            Zip:
-            <asp:TextBox ID="ZipTextBox" runat="server" Text='<%# Bind("Zip") %>' />
-            <br />
-            PhoneNumber:
-            <asp:TextBox ID="PhoneNumberTextBox" runat="server" Text='<%# Bind("PhoneNumber") %>' />
-            <br />
-            PhoneNumber1:
-            <asp:TextBox ID="PhoneNumber1TextBox" runat="server" Text='<%# Bind("PhoneNumber1") %>' />
-            <br />
-            PrimaryEmail:
-            <asp:TextBox ID="PrimaryEmailTextBox" runat="server" Text='<%# Bind("PrimaryEmail") %>' />
-            <br />
-            UserID:
-            <asp:Label ID="UserIDLabel1" runat="server" Text='<%# Eval("UserID") %>' />
+         <table>
+             <tr>
+                 <td align="right"> First Name: </td><td align="left"><asp:TextBox ID="tb_FirstName" runat="server" Text='<%# Bind("FirstName") %>' /></td>                    
+             </tr>
+
+             <tr>
+                 <td align="right"> Last Name: </td><td align="left"><asp:TextBox ID="tb_LastName" runat="server" Text='<%# Bind("LastName")%>' /></td>                    
+             </tr>
+
+             <tr>
+                 <td align="right"> Birth Date: </td><td align="left"><asp:TextBox ID="tb_BirthDate" runat="server" Text='<%# Bind("Birthdate")%>' /></td>                    
+             </tr>
+
+             <tr>
+                 <td align="right"> Address1: </td><td align="left"><asp:TextBox ID="tb_Address1" runat="server" Text='<%# Bind("Address1")%>' /></td>                    
+             </tr>
+
+             <tr>
+                 <td align="right"> Address2: </td><td align="left"><asp:TextBox ID="tb_Address2" runat="server" Text='<%# Bind("Address2")%>' /></td>                    
+             </tr>
+
+             <tr>
+                 <td align="right"> City: </td><td align="left"><asp:TextBox ID="tb_City" runat="server" Text='<%# Bind("City")%>' /></td>                    
+             </tr>
+
+             <tr>
+                 <td align="right"> State: </td>
+                 <td align="left">
+                     <asp:DropDownList ID="ddlState" runat="server" DataSourceID="SqlDataSource1"
+                        DataTextField="PostalCode" DataValueField="PostalCode" SelectedValue='<%# Bind("State")%>' />
+                 </td>
+             </tr>      
+
+             <tr>
+                  <td align="right"> Zip: </td><td align="left"><asp:TextBox ID="tb_Zip" runat="server" Text='<%# Bind("Zip")%>' /></td>            
+             </tr>
+
+             <tr>
+                  <td align="right"> Phone Number 1: </td><td align="left"><asp:TextBox ID="tb_PhoneNumber1" runat="server" Text='<%# Bind("PhoneNumber")%>' /></td>
+             </tr>
+
+             <tr>
+                 <td align="right"> Phone Number 2: </td><td align="left"><asp:TextBox ID="tb_PhoneNumber2" runat="server" Text='<%# Bind("Phonenumber1")%>' /></td> 
+             </tr>
+
+             <tr>
+                  <td align="right"> E-mail: </td><td align="left"><asp:TextBox ID="tb_email" runat="server" Text='<%# Bind("PrimaryEmail")%>' /></td>
+             </tr>
+
+             <tr>
+                 <td> &nbsp; </td><td> &nbsp; </td>
+             </tr>
+                 
+             <tr>
+                 <td align="right"> User ID: </td><td align="left"><asp:Label ID="lbl_UserID" runat="server" Text='<%# Eval("UserId")%>' /></td> 
+             </tr>
+
+             <tr>
+                  <td align="right"> User Name: </td><td align="left"><asp:TextBox ID="tb_UserName" Enabled="false" runat="server" Text='<%# Bind("UserName")%>' /></td>
+             </tr>
+
+             <tr>
+                  <td align="right"> Role Name: </td><td align="left"><asp:TextBox ID="tb_RoleName" Enabled="false" runat="server" Text='<%# Bind("RoleName")%>' /></td>
+             </tr>
+         </table>
+            
+       
             <br />
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             &nbsp;
             <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
+             SelectCommand="SELECT [PostalCode] FROM [SLPL_StateCodes]">
+            </asp:SqlDataSource>
+
         </EditItemTemplate>
-        <InsertItemTemplate>
-            <tr>
-            <td>Role:</td>
-            <asp:TextBox ID="RoleNameTextBox" runat="server" Text='<%# Bind("RoleName") %>' />
-            </ tr><tr>
-            <td>Username:</td>
-            <asp:TextBox ID="UserNameTextBox" runat="server" Text='<%# Bind("UserName") %>' />
-            </ tr><tr>
-            <td>First Name:</td>
-            <asp:TextBox ID="FirstNameTextBox" runat="server" Text='<%# Bind("FirstName") %>' />
-            </ tr><tr>
-            <td>Last Name:</td>
-            <asp:TextBox ID="LastNameTextBox" runat="server" Text='<%# Bind("LastName") %>' />
-            </ tr><tr>
-            <td>Birthdate:</td>
-            <asp:TextBox ID="BirthdateTextBox" runat="server" Text='<%# Bind("Birthdate") %>' />
-            </ tr><tr>
-            <td>Address Line 1:</td>
-            <asp:TextBox ID="Address1TextBox" runat="server" Text='<%# Bind("Address1") %>' />
-            </ tr><tr>
-            <td>Address Line 2:</td>
-            <asp:TextBox ID="Address2TextBox" runat="server" Text='<%# Bind("Address2") %>' />
-            </ tr><tr>
-            <td>City:</td>
-            <asp:TextBox ID="CityTextBox" runat="server" Text='<%# Bind("City") %>' />
-            </ tr><tr>
-            <td>State:</td>
-            <asp:TextBox ID="StateTextBox" runat="server" Text='<%# Bind("State") %>' />
-            </ tr><tr>
-            <td>Zip:</td>
-            <asp:TextBox ID="ZipTextBox" runat="server" Text='<%# Bind("Zip") %>' />
-            </ tr><tr>
-            <td>Phone Number:</td>
-            <asp:TextBox ID="PhoneNumberTextBox" runat="server" Text='<%# Bind("PhoneNumber") %>' />
-            </ tr><tr>
-            <td>Alternate Phone:</td>
-            <asp:TextBox ID="PhoneNumber1TextBox" runat="server" Text='<%# Bind("PhoneNumber1") %>' />
-            </ tr><tr>
-            <td>Primary Email:</td>
-            <asp:TextBox ID="PrimaryEmailTextBox" runat="server" Text='<%# Bind("PrimaryEmail") %>' />
-            </ tr><tr>
-            <td>UserID:</td>
-            <asp:TextBox ID="UserIDTextBox" runat="server" Text='<%# Bind("UserID") %>' />
-            </ tr>
-            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+        
+        <InsertItemTemplate>          
         </InsertItemTemplate>
-        <ItemTemplate><table>
-            RoleName:
-            <asp:Label ID="RoleNameLabel" runat="server" Text='<%# Bind("RoleName") %>' />
-            <br />
-            UserName:
-            <asp:Label ID="UserNameLabel" runat="server" Text='<%# Bind("UserName") %>' />
-            <br />
-            FirstName:
-            <asp:Label ID="FirstNameLabel" runat="server" Text='<%# Bind("FirstName") %>' />
-            <br />
-            LastName:
-            <asp:Label ID="LastNameLabel" runat="server" Text='<%# Bind("LastName") %>' />
-            <br />
-            Birthdate:
-            <asp:Label ID="BirthdateLabel" runat="server" Text='<%# Bind("Birthdate") %>' />
-            <br />
-            Address1:
-            <asp:Label ID="Address1Label" runat="server" Text='<%# Bind("Address1") %>' />
-            <br />
-            Address2:
-            <asp:Label ID="Address2Label" runat="server" Text='<%# Bind("Address2") %>' />
-            <br />
-            City:
-            <asp:Label ID="CityLabel" runat="server" Text='<%# Bind("City") %>' />
-            <br />
-            <asp:DropDownList ID="ddlState" runat="server" DataSourceID="SqlDataSource1"
-                DataTextField="State" DataValueField="State" SelectedValue='<%# Bind("State") %>' />
-            <asp:DropDownList ID="ddlZip" runat="server" DataSourceID="SqlDataSource1"
-                DataTextField="Zip Code" DataValueField="Zip Code" SelectedValue='<%# Bind("Zip")%>' />
-            <br />
-            PhoneNumber:
-            <asp:Label ID="PhoneNumberLabel" runat="server" Text='<%# Bind("PhoneNumber") %>' />
-            <br />
-            PhoneNumber1:
-            <asp:Label ID="PhoneNumber1Label" runat="server" Text='<%# Bind("PhoneNumber1") %>' />
-            <br />
-            PrimaryEmail:
-            <asp:Label ID="PrimaryEmailLabel" runat="server" Text='<%# Bind("PrimaryEmail") %>' />
-            <br />
-            UserID:
-            <asp:Label ID="UserIDLabel" runat="server" Text='<%# Eval("UserID") %>' />
-            <br />
+                           
+        
+        <ItemTemplate>   
+            
+           <table>
 
-        </table>
+             <tr>
+                 <td align="right"> First Name: </td><td align="left"><asp:Label ID="lbl_FirstName" runat="server" Text='<%# Bind("FirstName") %>' /></td>                    
+             </tr>
 
-            <asp:Button ID="EditButton" runat="server" CausesValidation="false" CommandName="Edit" Text="Edit"/>
-            &nbsp;
-            <asp:Button ID="DeleteButton" runat="server" CausesValidation="false" CommandName="Delete" Text="Delete" 
-                onClick="DeleteButton_Click" onClientClick="return confirm ('Are you sure you want to delete this patron record?')"/>
 
+             <tr>
+                 <td align="right"> Last Name: </td><td align="left"><asp:Label ID="lbl_LastName" runat="server" Text='<%# Bind("LastName")%>' /></td>                    
+             </tr>
+
+
+             <tr>
+                 <td align="right"> Birth Date: </td><td align="left"><asp:Label ID="lbl_BirthDate" runat="server" Text='<%# Bind("Birthdate")%>' /></td>                    
+             </tr>
+
+
+             <tr>
+                 <td align="right"> Address1: </td><td align="left"><asp:Label ID="lbl_Address1" runat="server" Text='<%# Bind("Address1")%>' /></td>                    
+             </tr>
+
+
+             <tr>
+                 <td align="right"> Address2: </td><td align="left"><asp:Label ID="lbl_Address2" runat="server" Text='<%# Bind("Address2")%>' /></td>                    
+             </tr>
+
+
+             <tr>
+                 <td align="right"> City: </td><td align="left"><asp:Label ID="lbl_City" runat="server" Text='<%# Bind("City")%>' /></td>                    
+             </tr>
+
+
+             <tr>
+                 <td align="right"> State: </td><td align="left"><asp:Label ID="lbl_State" runat="server" Text='<%# Bind("State")%>' /></td>                    
+             </tr> 
+                    
+
+             <tr>
+                  <td align="right"> Zip: </td><td align="left"><asp:Label ID="lbl_Zip" runat="server" Text='<%# Bind("Zip")%>' /></td>            
+             </tr>
+
+
+             <tr>
+                  <td align="right"> Phone Number 1: </td><td align="left"><asp:Label ID="lbl_PhoneNumber1" runat="server" Text='<%# Bind("PhoneNumber")%>' /></td>
+             </tr>
+
+
+             <tr>
+                 <td align="right"> Phone Number 2: </td><td align="left"><asp:Label ID="lbl_PhoneNumber2" runat="server" Text='<%# Bind("Phonenumber1")%>' /></td> 
+             </tr>
+
+
+             <tr>
+                  <td align="right"> E-mail: </td><td align="left"><asp:Label ID="lbl_email" runat="server" Text='<%# Bind("PrimaryEmail")%>' /></td>
+             </tr>
+
+
+             <tr>
+                 <td> &nbsp; </td><td> &nbsp; </td>
+             </tr>
+
+                 
+             <tr>
+                 <td align="right"> User ID: </td><td align="left"><asp:Label ID="lbl_UserID" runat="server" Text='<%# Eval("UserId")%>' /></td> 
+             </tr>
+
+
+             <tr>
+                  <td align="right"> User Name: </td><td align="left"><asp:Label ID="lbl_UserName" runat="server" Text='<%# Bind("UserName")%>' /></td>
+             </tr>
+
+
+             <tr>
+                  <td align="right"> Role Name: </td><td align="left"><asp:Label ID="lbl_RoleName" runat="server" Text='<%# Bind("RoleName")%>' /></td>
+             </tr>
+
+           </table>
+
+             <br />
+                        
+             <asp:Button ID="EditButton" runat="server" CauseValidation="False" CommandName="Edit" Text="Edit" />
+
+             &nbsp
+
+             <asp:Button ID="DeleteButton" runat="server" CauseValidation="False" CommandName="Delete" Text="Delete" OnClientClick ="return confirm('Are you sure you want to delete this material record?')"/>
+         
+           
+                  
         </ItemTemplate>
-    </asp:FormView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
-        SelectCommand="SELECT aspnet_Roles.RoleName, aspnet_Users.UserName, SLPL_UserProfile.FirstName, SLPL_UserProfile.LastName, SLPL_UserProfile.Birthdate, SLPL_UserProfile.Address1, SLPL_UserProfile.Address2, SLPL_UserProfile.City, SLPL_UserProfile.State, SLPL_UserProfile.Zip, SLPL_UserProfile.PhoneNumber, SLPL_UserProfile.PhoneNumber1, SLPL_UserProfile.PrimaryEmail, SLPL_UserProfile.UserID FROM SLPL_UserProfile INNER JOIN aspnet_Users ON SLPL_UserProfile.UserID = aspnet_Users.UserId INNER JOIN aspnet_Roles ON aspnet_Users.ApplicationId = aspnet_Roles.ApplicationId"></asp:SqlDataSource>
 
+    </asp:FormView>
+
+     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT [PostalCode] FROM [SLPL_StateCodes]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
+        DeleteCommand="DELETE FROM [SLPL_UserProfile] WHERE [UserID] = @UserID" 
+        
+        SelectCommand="SELECT SLPL_UserProfile.UserID, SLPL_UserProfile.FirstName, SLPL_UserProfile.LastName, SLPL_UserProfile.Birthdate, SLPL_UserProfile.Address1, SLPL_UserProfile.Address2, SLPL_UserProfile.City, SLPL_UserProfile.State, SLPL_UserProfile.Zip, SLPL_UserProfile.PhoneNumber, SLPL_UserProfile.PhoneNumber1, SLPL_UserProfile.PrimaryEmail, aspnet_Users.UserName, aspnet_Roles.RoleName 
+        FROM SLPL_UserProfile INNER JOIN aspnet_Users ON SLPL_UserProfile.UserID = aspnet_Users.UserID INNER JOIN aspnet_Roles ON aspnet_Users.RoleId = aspnet_Roles.RoleId
+        WHERE (SLPL_UserProfile.UserID = @UserID)" 
+        
+        UpdateCommand="UPDATE [SLPL_UserProfile] SET [FirstName] = @FirstName, [LastName] = @LastName, [Birthdate] = @Birthdate, [Address1] = @Address1, [Address2] = @Address2, [City] = @City, [State] = @State, [Zip] = @Zip, [PhoneNumber] = @PhoneNumber, [PhoneNumber1] = @PhoneNumber1, [PrimaryEmail] = @PrimaryEmail WHERE [UserID] = @UserID">
+        
+        <DeleteParameters>
+            <asp:Parameter Name="UserID" Type="Object" />
+        </DeleteParameters>
+       
+        <SelectParameters>
+            <asp:QueryStringParameter Name="UserID" QueryStringField="UserID" />
+        </SelectParameters> 
+
+        <UpdateParameters>
+            <asp:Parameter Name="FirstName" Type="String" />
+            <asp:Parameter Name="LastName" Type="String" />
+            <asp:Parameter Name="Birthdate" Type="DateTime" />
+            <asp:Parameter Name="Address1" Type="String" />
+            <asp:Parameter Name="Address2" Type="String" />
+            <asp:Parameter Name="City" Type="String" />
+            <asp:Parameter Name="State" Type="String" />
+            <asp:Parameter Name="Zip" Type="Double" />
+            <asp:Parameter Name="PhoneNumber" Type="Double" />
+            <asp:Parameter Name="PhoneNumber1" Type="Double" />
+            <asp:Parameter Name="PrimaryEmail" Type="String" />
+            <asp:Parameter Name="UserID" Type="Object" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
 
     <br />
     <asp:Label ID="lbl_DeletedUser" runat="server" Text=""></asp:Label>
     <br />
-
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>"
-        
-        DeleteCommand="DELETE FROM [SLPL_Users] WHERE [UserID] = @UserID" 
-        
-        InsertCommand="INSERT INTO [SLPL_Users] ([Username], [FirstName], [LastName], [Birthdate], [Address1], [Address2], [City], [State], [Zip], [PhoneNumber], [PhoneNumber1], [PrimaryEmail])
-            VALUES @Username, @FirstName, @LastName, @Birthdate, @Address1, @Address2, @City, @State, @Zip, @PhoneNumber, @PhoneNumber1, @PrimaryEmail" 
-        
-        UpdateCommand="UPDATE [SLPL_Users] SET [FirstName] = @FirstName, [LastName] = @LastName, [Birthdate] = @Birthdate, [Address1] = @Address1, [Address2] = @Address2, [PhoneNumber] = @PhoneNumber, [PhoneNumber1] = @PhoneNumber1, [PrimaryEmail] = @PrimaryEmail WHERE [UserID] = @UserID">
-    
-    <DeleteParameters><asp:Parameter Name="User ID" Type="Object" /></DeleteParameters>
-    <SelectParameters><asp:QueryStringParameter Name="UserID" QueryStringField="UserID" /></SelectParameters>
-    <UpdateParameters>
-        <asp:Parameter Name="FirstName" Type="String" />
-        <asp:Parameter Name="LastName" Type="String" />
-        <asp:Parameter Name="Birthdate" Type="String" />
-        <asp:Parameter Name="Address1" Type="String" />
-        <asp:Parameter Name="Address2" Type="String" />
-        <asp:Parameter Name="City" Type="String" />
-        <asp:Parameter Name="State" />
-        <asp:Parameter Name="Zip" />
-        <asp:Parameter Name="PhoneNumber" Type="String" />
-        <asp:Parameter Name="PhoneNumber1" Type="String" />
-        <asp:Parameter Name="PrimaryEmail" Type="String" />
-        <asp:Parameter Name="UserID" />
-    </UpdateParameters>
 
 </asp:Content>
 
