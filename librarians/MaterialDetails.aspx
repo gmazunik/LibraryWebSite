@@ -61,6 +61,13 @@
 
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT [Availability] FROM [SLPL_MaterialAvailability]"></asp:SqlDataSource>
 
+    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT SLPL_UserProfile.UserID, aspnet_Users.UserName, SLPL_UserProfile.FirstName, SLPL_UserProfile.LastName, SLPL_UserProfile.Address1, SLPL_UserProfile.Address2, SLPL_UserProfile.City, SLPL_UserProfile.State, SLPL_UserProfile.Zip, SLPL_UserProfile.PhoneNumber, SLPL_UserProfile.PhoneNumber1, SLPL_UserProfile.PrimaryEmail FROM aspnet_Users INNER JOIN SLPL_UserProfile ON aspnet_Users.UserID = SLPL_UserProfile.UserID INNER JOIN SLPL_Rentals ON aspnet_Users.UserName = SLPL_Rentals.UserName WHERE (SLPL_Rentals.MatID = @MatID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="MatID" QueryStringField="MatID"
+                Type="Int32"/>
+        </SelectParameters>
+    </asp:SqlDataSource>
+
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="MatID" DataSourceID="SqlDataSource1">
         
         <EditItemTemplate> 
@@ -182,6 +189,42 @@
         </ItemTemplate>
     </asp:FormView>
 
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4">
+        <Columns>
+            <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
+            <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
+            <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+            <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+            <asp:BoundField DataField="Address1" HeaderText="Address1" SortExpression="Address1" />
+            <asp:BoundField DataField="Address2" HeaderText="Address2" SortExpression="Address2" />
+            <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+            <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+            <asp:BoundField DataField="Zip" HeaderText="Zip" SortExpression="Zip" />
+            <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
+            <asp:BoundField DataField="PhoneNumber1" HeaderText="PhoneNumber1" SortExpression="PhoneNumber1" />
+            <asp:BoundField DataField="PrimaryEmail" HeaderText="PrimaryEmail" SortExpression="PrimaryEmail" />
+        </Columns>
+    </asp:GridView>
+
+    <br /><br />
+
+      <asp:DataList ID="MaterialPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
+	    
+        <ItemTemplate>
+
+	      <a href='<%# Eval("PhotoName", "../Materials/{0}")%>' target="_blank">  
+	
+	            <asp:Image ID="MaterialImage1" runat="server"
+	            ImageURL='<%# Eval("PhotoName", "../Materials/{0}")%>'
+	            Height="200px"
+	            AlternateText='<%# Eval ("Title") %>'
+	            ToolTip='<%# Eval ("Title") %>' />
+
+	       </a>
+
+	    </ItemTemplate>
+	
+     </asp:DataList>
     <asp:Label ID="lbl_DeletedMaterial" runat="server" Text=""></asp:Label>
 
 </asp:Content>

@@ -15,8 +15,4 @@ Partial Class librarians_MaterialDetails
         Response.Redirect("ViewAllMaterials.aspx")
 
     End Sub
-
-    Protected Sub SqlDataSource2_Selecting(sender As Object, e As SqlDataSourceSelectingEventArgs) Handles SqlDataSource2.Selecting
-
-    End Sub
 End Class

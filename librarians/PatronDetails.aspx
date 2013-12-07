@@ -184,6 +184,18 @@
 
     </asp:FormView>
 
+     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MatID" DataSourceID="SqlDataSource3">
+         <Columns>
+             <asp:BoundField DataField="MatID" HeaderText="MatID" InsertVisible="False" ReadOnly="True" SortExpression="MatID" />
+             <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+             <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
+             <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
+             <asp:BoundField DataField="DateDue" HeaderText="DateDue" SortExpression="DateDue" />
+         </Columns>
+    </asp:GridView>
+
+
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT [PostalCode] FROM [SLPL_StateCodes]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
         ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
@@ -215,6 +227,12 @@
             <asp:Parameter Name="PrimaryEmail" Type="String" />
             <asp:Parameter Name="UserID" Type="Object" />
         </UpdateParameters>
+    </asp:SqlDataSource>
+
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT SLPL_Materials.MatID, SLPL_Materials.Type, SLPL_Materials.Title, SLPL_Materials.Author, SLPL_Materials.ISBN, SLPL_Rentals.DateDue FROM SLPL_Rentals INNER JOIN SLPL_Materials ON SLPL_Rentals.MatID = SLPL_Materials.MatID INNER JOIN aspnet_Users ON SLPL_Rentals.UserName = aspnet_Users.UserName WHERE (aspnet_Users.UserID = @UserID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="UserID" QueryStringField="UserID" />
+        </SelectParameters>
     </asp:SqlDataSource>
 
     <br />
