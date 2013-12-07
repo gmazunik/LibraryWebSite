@@ -3,7 +3,7 @@
 Partial Class librarians_CheckinMat
     Inherits System.Web.UI.Page
 
-    Protected Sub btn_Return_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_Return.Click
+    Protected Sub btn_Checkin_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_Checkin.Click
 
         Dim strMatID As String = tb_MatID.Text
 
