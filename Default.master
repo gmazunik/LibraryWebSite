@@ -28,15 +28,19 @@
 
         <div id="menu">
         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" > 
+            <LevelMenuItemStyles>
+                <asp:MenuItemStyle CssClass="menu" />
+            </LevelMenuItemStyles>      
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
-        
-            <asp:TextBox ID="tb_search" runat="server" style="width: 128px"></asp:TextBox>
-
-            <asp:Button ID="btn_search" runat="server" Text="Search"/>
-        
         </div> 
-              
+       
+          
+        <div id="date">
+            <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
+            <asp:TextBox ID="tb_search" runat="server" style="width: 128px"></asp:TextBox>
+            <asp:Button ID="btn_search" runat="server" Text="Search"/>
+        </div>       
 
 
         <div id="content">
@@ -53,9 +57,6 @@
 
         <div id="footer">
                 <h4>Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> South Liberty Public Library</h4>
-            <div id="date">      
-                <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
-            </div> 
         </div>
 
       </div>

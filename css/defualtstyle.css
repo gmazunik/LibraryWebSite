@@ -134,12 +134,15 @@ MEDIA QUERIES
 DATE
 *************************************************************************************/
 #date {
-    background:white;
-    width:240px;
-    top:0px;
-    float: right;
-    }
-
+    background:#5798B4;
+    padding-top:15px;
+    padding-bottom:10px;
+    width:220px;
+    height:10px;
+    float:right;
+    display:inline-block;
+    margin-top: 0px;
+}
 
 
 /************************************************************************************
@@ -178,6 +181,14 @@ MENU
         background-color:#6e7277;
         color:#3399FF;
     }*/
+
+#menu {
+    padding-top:15px;
+    width:auto 0;
+    background:white;
+    display:inline-block;
+    float:left;
+    }
 
 #menu, #menu ul {
 	list-style:none;

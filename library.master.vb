@@ -13,7 +13,7 @@
         Dim strtext As String = tb_search.Text
         Dim url As String
 
-        url = "~/librarians/ViewAllMaterials.aspx?val=" + strtext
+        url = "~/ViewAllMaterials.aspx?val=" + strtext
 
         Response.Redirect(url)
     End Sub

@@ -14,7 +14,7 @@
         <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
         <asp:BoundField DataField="PhotoName" HeaderText="PhotoName" SortExpression="PhotoName" />
         <asp:BoundField DataField="Avail" HeaderText="Avail" SortExpression="Avail" />
-        <asp:HyperLinkField DataNavigateUrlFields="MatID" DataNavigateUrlFormatString="~/librarians/MaterialDetails.aspx?MatID={0}" Text="Select" />
+        <asp:HyperLinkField DataNavigateUrlFields="MatID" DataNavigateUrlFormatString="MaterialDetails.aspx?MatID={0}" Text="Select" />
     </Columns>
 </asp:GridView>
 </asp:Content>

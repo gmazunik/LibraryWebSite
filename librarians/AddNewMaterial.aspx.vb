@@ -4,7 +4,7 @@ Partial Class librarians_AddNewMaterial
 
     Protected Sub FormView1_ItemInserted(sender As Object, e As FormViewInsertedEventArgs) Handles FormView1.ItemInserted
 
-        Response.Redirect("~/librarians/ViewAllMaterials.aspx")
+        Response.Redirect("../ViewAllMaterials.aspx")
 
     End Sub
 End Class
