@@ -7,7 +7,7 @@ Partial Class librarians_CheckinMat
 
         Dim strMatID As String = tb_MatID.Text
 
-        Dim sqlConn As New SqlConnection(ConfigurationManager.ConnectionStrings("cs_SLPL").ConnectionString
+        Dim sqlConn As New SqlConnection(ConfigurationManager.ConnectionStrings("cs_SLPL").ConnectionString)
 
         Dim sqlAdp As New SqlDataAdapter
         Dim sqlCmd As New SqlCommand

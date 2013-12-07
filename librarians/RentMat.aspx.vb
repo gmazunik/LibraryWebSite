@@ -10,12 +10,12 @@ Partial Class librarians_RentMat
         Dim RentDate As DateTime = DateTime.Now
         Dim DateDue As DateTime = DateAdd("m", 1, Today)
 
-        Dim sqlComm As New SqlConnection(ConfigurationManager.ConnectionStrings("cs_SLPL").ConnectionString)
+        Dim sqlConn As New SqlConnection(ConfigurationManager.ConnectionStrings("cs_SLPL").ConnectionString)
 
         Dim sqlAdp As New SqlDataAdapter
         Dim sqlCmd As New SqlCommand
 
-        sqlCmd.Connection = SqlConnection
+        sqlCmd.Connection = sqlConn
         sqlCmd.CommandText = "sp_SLPL_Checkout"
         sqlCmd.CommandType = Data.CommandType.StoredProcedure
 
