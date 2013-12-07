@@ -54,17 +54,6 @@ Partial Class librarians_AddPatron
                 myCommand.ExecuteNonQuery()
                 myConnection.Close()
             End Using
-
-            Dim RoleId As String = "ef343dab-add6-4c3c-ab8e-9685b7f291d0"
-            Dim connectionString2 As String = ConfigurationManager.ConnectionStrings("cs_SLPL").ConnectionString
-            Dim updatesql2 As String = "INSERT INTO [aspnet_Users] ([RoleId]) VALUES @RoleId"
-
-            Using myConnection2 As New SqlConnection(connectionString2)
-                myConnection2.Open()
-                Dim myCommand2 As New SqlCommand(updatesql2, myConnection2)
-                myCommand2.Parameters.AddWithValue("@RoleId", RoleId)
-            End Using
-
         End If
 
     End Sub

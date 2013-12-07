@@ -32,6 +32,12 @@ STRUCTURE
 	height: 180px;
     background-color:#F3EFE0;
 }
+
+#sidebar {
+	width: 31%;
+	float: right;
+}
+
 #content {
 	width: 0 auto;
     padding:5px;
@@ -50,10 +56,10 @@ BORDER & GUIDELINE
 	background: #f8f8f8;
 }
 
-#header, #content{
+#header, #content,  #sidebar{
 	margin-bottom: 5px;
 }
-#pagewrap, #header, #content, #footer {
+#pagewrap, #header, #content, #footer,  #sidebar {
 	border: solid 1px #ccc;
 }
 

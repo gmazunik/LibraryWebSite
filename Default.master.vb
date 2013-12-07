@@ -7,5 +7,16 @@
         lbl_copy.Text = DateTime.Now.Year
 
     End Sub
+
+    Protected Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+
+        Dim strtext As String = tb_search.Text
+        Dim url As String
+
+        url = "~/librarians/ViewAllMaterials.aspx?val=" + strtext
+
+        Response.Redirect(url)
+
+    End Sub
 End Class
 

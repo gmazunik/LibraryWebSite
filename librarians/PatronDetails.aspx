@@ -176,7 +176,7 @@
 
              &nbsp
 
-             <asp:Button ID="DeleteButton" runat="server" CauseValidation="False" CommandName="Delete" Text="Delete" OnClientClick ="return confirm('Are you sure you want to delete this material record?')"/>
+             <asp:Button ID="DeleteButton" runat="server" CauseValidation="False" CommandName="Delete" Text="Delete" OnClientClick ="return confirm('Are you sure you want to delete this patron record?')"/>
          
            
                   
@@ -189,9 +189,7 @@
         ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
         DeleteCommand="DELETE FROM [SLPL_UserProfile] WHERE [UserID] = @UserID" 
         
-        SelectCommand="SELECT SLPL_UserProfile.UserID, SLPL_UserProfile.FirstName, SLPL_UserProfile.LastName, SLPL_UserProfile.Birthdate, SLPL_UserProfile.Address1, SLPL_UserProfile.Address2, SLPL_UserProfile.City, SLPL_UserProfile.State, SLPL_UserProfile.Zip, SLPL_UserProfile.PhoneNumber, SLPL_UserProfile.PhoneNumber1, SLPL_UserProfile.PrimaryEmail, aspnet_Users.UserName, aspnet_Roles.RoleName 
-        FROM SLPL_UserProfile INNER JOIN aspnet_Users ON SLPL_UserProfile.UserID = aspnet_Users.UserID INNER JOIN aspnet_Roles ON aspnet_Users.RoleId = aspnet_Roles.RoleId
-        WHERE (SLPL_UserProfile.UserID = @UserID)" 
+        SelectCommand="SELECT SLPL_UserProfile.UserID, SLPL_UserProfile.FirstName, SLPL_UserProfile.LastName, SLPL_UserProfile.Birthdate, SLPL_UserProfile.Address1, SLPL_UserProfile.Address2, SLPL_UserProfile.City, SLPL_UserProfile.State, SLPL_UserProfile.Zip, SLPL_UserProfile.PhoneNumber, SLPL_UserProfile.PhoneNumber1, SLPL_UserProfile.PrimaryEmail, aspnet_Users.UserName, aspnet_Roles.RoleName FROM SLPL_UserProfile INNER JOIN aspnet_Users ON SLPL_UserProfile.UserID = aspnet_Users.UserID INNER JOIN aspnet_UsersInRoles ON aspnet_Users.UserID = aspnet_UsersInRoles.UserId INNER JOIN aspnet_Roles ON aspnet_UsersInRoles.RoleId = aspnet_Roles.RoleId WHERE (SLPL_UserProfile.UserID = @UserID)" 
         
         UpdateCommand="UPDATE [SLPL_UserProfile] SET [FirstName] = @FirstName, [LastName] = @LastName, [Birthdate] = @Birthdate, [Address1] = @Address1, [Address2] = @Address2, [City] = @City, [State] = @State, [Zip] = @Zip, [PhoneNumber] = @PhoneNumber, [PhoneNumber1] = @PhoneNumber1, [PrimaryEmail] = @PrimaryEmail WHERE [UserID] = @UserID">
         
