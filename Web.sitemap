@@ -11,8 +11,10 @@
         <siteMapNode url="~/librarians/ViewAllMaterials.aspx" title="View All Materials"  description="" />
         <siteMapNode url="~/librarians/AddPatron.aspx" title="Add Patron"  description="" />
         <siteMapNode url="~/librarians/ViewAllPatrons.aspx" title="View All Patrons"  description="" />
-        <siteMapNode url="~/librarians/checkIn.aspx" title="Check In Material"  description="" />
-        <siteMapNode url="~/librarians/checkOut.aspx" title="Check Out Material"  description="" />
+        <siteMapNode url="~/librarians/CheckinMat.aspx" title="Check In Material"  description="" />
+        <siteMapNode url="~/librarians/CheckoutMat.aspx" title="Check Out Material"  description="" />
+        <siteMapNode url="~/librarians/ViewAllCheckouts.aspx" title="ViewAllCheckouts"  description="" />
+        <siteMapNode url="~/librarians/MaterialsDue.aspx" title="View Due/Overdue Materials"  description="" />
     </siteMapNode>
      
     <siteMapNode url="~/patrons/default.aspx" title="Patrons"  description="" >
