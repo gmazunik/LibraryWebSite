@@ -111,7 +111,11 @@
                 </tr>
 
                 <tr> 
-                    <td align="right">PhotoName:</td><td align="left"><asp:Textbox ID="tb_PhotoName" runat="server" Text='<%# Bind("PhotoName") %>' /></td>
+                    <td align="right">PhotoName:</td><td align="left"><asp:Textbox ID="tb_PhotoName" runat="server" Text='<%# Bind("PhotoName") %>' />
+                    <asp:FileUpload ID="FileUploadControl" runat="server" />
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Upload" />
+                    </td>
+                    
                 </tr>
 
                 <tr> 

@@ -108,6 +108,26 @@
         </ItemTemplate>
     </asp:FormView>
 
+    <br /><br />
+      
+     <asp:DataList ID="MaterialPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
+	    
+        <ItemTemplate>
+
+	      <a href='<%# Eval("PhotoName", "Materials/{0}")%>' target="_blank">  
+	
+	            <asp:Image ID="MaterialImage1" runat="server"
+	            ImageURL='<%# Eval("PhotoName", "~/Materials/{0}")%>'
+	            Height="200px"
+	            AlternateText='<%# Eval ("Title") %>'
+	            ToolTip='<%# Eval ("Title") %>' />
+
+	       </a>
+
+	    </ItemTemplate>
+	
+     </asp:DataList>
+
     <asp:Label ID="lbl_DeletedMaterial" runat="server" Text=""></asp:Label>
 
 </asp:Content>
