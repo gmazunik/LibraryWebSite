@@ -8,6 +8,7 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="~/css/defualtstyle.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/gridviewstyle.css" />
     <!--[if IE]>
 <style type="text/css">
 	#menu li {
@@ -20,12 +21,13 @@
 <body>
     <form id="form1" runat="server">
       <div id="pagewrap">
-
         <div id="header"> 
             <h1>South Liberty Public Library</h1>
-            <asp:Image class="hdr_img" ID="Image1" runat="server" ImageUrl="~/SLPL Logo/SLPL_logo.png" />
-        </div>
 
+            <asp:Image class="hdr_img" ID="Image1" runat="server" ImageUrl="~/SLPL Logo/SLPL_logo.png" />
+            </div>
+
+ 
         <div id="menu">
         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" > 
             <LevelMenuItemStyles>
@@ -33,15 +35,18 @@
             </LevelMenuItemStyles>      
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
-        </div> 
-       
-          
-        <div id="date">
-            <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
-            <asp:TextBox ID="tb_search" runat="server" style="width: 128px"></asp:TextBox>
-            <asp:Button ID="btn_search" runat="server" Text="Search"/>
-        </div>       
+        </div>
 
+
+       <div id="searchdate">
+           <div id="date">
+            <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
+           </div>  
+           <div id="search">
+            <asp:TextBox ID="tb_search" runat="server" Width="400px"></asp:TextBox>
+            <asp:Button ID="btn_search" runat="server" Text="Search"/>
+           </div>     
+        </div>
 
         <div id="content">
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">

@@ -133,16 +133,24 @@ MEDIA QUERIES
 /************************************************************************************
 DATE
 *************************************************************************************/
-#date {
-    background:#5798B4;
-    padding-top:15px;
-    padding-bottom:10px;
-    width:220px;
-    height:10px;
-    float:right;
-    margin-top: 0px;
+#searchdate {
+    background-color:#5798B4;
+    display:inline-block;
+    width:100%;
 }
 
+#date {
+    padding-bottom:10px;
+    float:right;
+    margin-left: 0px;
+    display:inline-block;
+}
+
+#search {
+float:left;
+display:inline-block;
+
+}
 
 /************************************************************************************
 MENU
@@ -187,18 +195,20 @@ MENU
 
 #menu {
     padding-top:15px;
-    width:auto 0;
-    background:white;
+    width:auto;
+    background:#5798B4;
     display:inline-block;
     float:left;
+    width:100%;
+    border-top:1px solid #fff;
+   
     }
-
 
 
 #menu, #menu ul {
 	list-style:none;
 	padding:0;
-	margin-bottom:5px;
+
 }
 #menu li {
 	float:left;
@@ -274,3 +284,4 @@ MENU
             color: #000;
             background: #eee;
         }
+

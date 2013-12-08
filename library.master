@@ -8,6 +8,7 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="~/css/librarystyle.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/gridviewstyle.css" />
 
       <!--[if IE]>
 <style type="text/css">
@@ -36,11 +37,15 @@
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
         </div> 
               
-        <div id="date">
+       <div id="searchdate">
+           <div id="date">
             <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
-            <asp:TextBox ID="tb_search" runat="server" style="width: 128px"></asp:TextBox>
+           </div>  
+           <div id="search">
+            <asp:TextBox ID="tb_search" runat="server" Width="400px"></asp:TextBox>
             <asp:Button ID="btn_search" runat="server" Text="Search"/>
-        </div>      
+           </div>     
+        </div>    
 
         <div id="content">
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">

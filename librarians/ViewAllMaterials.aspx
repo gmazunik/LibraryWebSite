@@ -4,7 +4,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT [MatID], [Type], [CallNumber], [Title], [Author], [Publisher], [Year], [ISBN], [PhotoName], [Avail] FROM [SLPL_Materials]"></asp:SqlDataSource>
-<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MatID" DataSourceID="SqlDataSource1" style="margin-bottom: 0px">
+<asp:GridView 
+    ID="GridView1" 
+    runat="server" 
+    AutoGenerateColumns="False" 
+    DataKeyNames="MatID" 
+    DataSourceID="SqlDataSource1" 
+    style="margin-bottom: 0px"
+    PageSize="10"
+    Gridlines="None"
+    CssClass="cssgridview"
+    HeaderStyle-CssClass="header"
+    PagerStyle-CssClass="pgr"
+    AllowPaging="True" 
+    AllowSorting="True" 
+    alternatingrowstyle-CssClass="alt"
+    >
     <Columns>
         <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
         <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
