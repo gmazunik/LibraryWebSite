@@ -18,7 +18,7 @@
     </siteMapNode>
      
     <siteMapNode url="~/patrons/default.aspx" title="Patrons"  description="" >
-        <siteMapNode url="javascript:;" title="My Profile"  description="" />
+        <siteMapNode url="~/patrons/PatronProfile.aspx" title="My Profile"  description="" />
         <siteMapNode url="~/patrons/ViewAllMaterials.aspx" title="View All Materials"  description="" />
     </siteMapNode>
         
