@@ -11,7 +11,6 @@
     DataKeyNames="MatID" 
     DataSourceID="SqlDataSource1" 
     style="margin-bottom: 0px"
-    PageSize="10"
     Gridlines="None"
     CssClass="cssgridview"
     HeaderStyle-CssClass="header"
@@ -20,17 +19,18 @@
     AllowSorting="True" 
     alternatingrowstyle-CssClass="alt"
     >
+<AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
     <Columns>
         <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
         <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
         <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
-        <asp:BoundField DataField="Publisher" HeaderText="Publisher" SortExpression="Publisher" />
-        <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year" />
-        <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
-        <asp:BoundField DataField="PhotoName" HeaderText="PhotoName" SortExpression="PhotoName" />
-        <asp:BoundField DataField="Avail" HeaderText="Avail" SortExpression="Avail" />
+        <asp:BoundField DataField="Avail" HeaderText="Availability" SortExpression="Avail" />
         <asp:HyperLinkField DataNavigateUrlFields="MatID" DataNavigateUrlFormatString="~/librarians/MaterialDetails.aspx?MatID={0}" Text="Select" />
     </Columns>
+
+<HeaderStyle CssClass="header"></HeaderStyle>
+
+<PagerStyle CssClass="pgr"></PagerStyle>
 </asp:GridView>
 </asp:Content>
 

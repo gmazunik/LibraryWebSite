@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" CodeFile="library.master.vb" Inherits="library" %>
+﻿<%@ Master Language="VB" CodeFile="login.master.vb" Inherits="login" %>
 
 <!DOCTYPE html>
 
@@ -9,15 +9,8 @@
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="~/css/librarystyle.css" />
     <link rel="stylesheet" type="text/css" href="~/css/gridviewstyle.css" />
-
-      <!--[if IE]>
-<style type="text/css">
-	#menu li {
-		position:static;
-	}
-</style>
-<![endif]--> 
 </head>
+
 
 <body>
     <form id="form1" runat="server">
@@ -29,9 +22,6 @@
         </div>
 
         <div id="menu">
-
-        <asp:LoginStatus ID="LoginStatus1" runat="server" />
-
         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" >
             <LevelMenuItemStyles>
                 <asp:MenuItemStyle CssClass="menu" />
@@ -44,10 +34,7 @@
            <div id="date">
             <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
            </div>  
-           <div id="search">
-            <asp:TextBox ID="tb_search" runat="server" Width="400px"></asp:TextBox>
-            <asp:Button ID="btn_search" runat="server" Text="Search Material"/>
-           </div>     
+           
         </div>    
 
         <div id="content">

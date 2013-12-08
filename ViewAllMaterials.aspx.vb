@@ -9,7 +9,7 @@ Partial Class librarians_allmaterials
 
         Dim searchword As String
 
-        searchword = " Select * From SLPL_Materials where ( Title Like '%" + RetrievedValue + "%')"
+        searchword = " Select * From SLPL_Materials where ( Title Like '%" + RetrievedValue + "%') OR ( Author Like '%" + RetrievedValue + "%')"
         SqlDataSource1.SelectCommand = searchword
 
     End Sub

@@ -29,12 +29,16 @@
 
  
         <div id="menu">
+        
+        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+
         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" > 
             <LevelMenuItemStyles>
                 <asp:MenuItemStyle CssClass="menu" />
             </LevelMenuItemStyles>      
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
+            
         </div>
 
 
@@ -44,7 +48,7 @@
            </div>  
            <div id="search">
             <asp:TextBox ID="tb_search" runat="server" Width="400px"></asp:TextBox>
-            <asp:Button ID="btn_search" runat="server" Text="Search"/>
+            <asp:Button ID="btn_search" runat="server" Text="Search Material" />
            </div>     
         </div>
 
