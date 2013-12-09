@@ -1,8 +1,29 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/library.master" AutoEventWireup="false" CodeFile="contact.aspx.vb" Inherits="contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-   
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" onload = "initialize()">
+    
 
+    <br />
+
+    <h2>Email Us At <a href="mailto:ui.6k183@gmail.com">ui.6k183@gmail.com</a></h2>
+
+    <br /><br />
+    
+</asp:Content>
+
+
+<%--<h2>Contact Info</h2>
+     <div>
+            <input type="text" name="start" id="start" value="Enter Address, Postal Code, City, etc." onclick="document.getElementById(this.id).value = '';" />
+            <button onclick="calcRoute()">Submit</button>
+            <button onclick="initialize()">Reset</button>
+        </div>
+         
+    <div id="map_canvas" ></div>
+    
+    
     <!--https://code.google.com/apis/console/?noredirect#project:546598111789:access-->
       <!--https://developers.google.com/maps/documentation/javascript/tutorial#api_key-->
       <!--http://www.commerx.com/how-to-make-a-google-map-that-gives-directions/-->
@@ -55,22 +76,5 @@
                 map: map,
             });
         }
-    </script>  
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" onload = "initialize()">
-    <h2>Contact Info</h2>
-     <div>
-            <input type="text" name="start" id="start" value="Enter Address, Postal Code, City, etc." onclick="document.getElementById(this.id).value = '';" />
-            <button onclick="calcRoute()">Submit</button>
-            <button onclick="initialize()">Reset</button>
-        </div>
-         
-    <div id="map_canvas" ></div> 
-
-    <br />
-
-    <h2>Email Us At <a href="mailto:ui.6k183@gmail.com">ui.6k183@gmail.com</a></h2>
-    
-
-</asp:Content>
+    </script>  --%>
 
