@@ -8,8 +8,9 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="css/gridviewstyle.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/gridviewstyle.css" type="text/css" media="all" />
     <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/detailsviewstyle.css"  type="text/css" media="screen" />
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
     <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.1.js"></script>
@@ -40,12 +41,11 @@
             </LevelMenuItemStyles>      
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
-
-        <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login_red_icon.png" Height="70px" />
-                       
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="70px" ImageUrl="~/images/SignUpHere_Icon.jpg" />
-        
-        </div>
+       
+        <div style="float:right;position:relative;">
+        <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login-button-blue-md.png" LogoutImageUrl="~/images/logout-button-blue-md (1).png" />
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/register-button-blue-md.png" />
+       </div>  </div>
 
 <div id="main" class="big-box">
     <div class="bg-top">

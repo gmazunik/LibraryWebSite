@@ -4,8 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-
-
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
         
         SelectCommand="SELECT [MatID], [Type], [CallNumber], [Title], [Author], [Publisher], [Year], [ISBN], [Avail], [PhotoName] FROM [SLPL_Materials] WHERE ([MatID] = @MatID)" 
@@ -68,7 +66,21 @@
         </SelectParameters>
     </asp:SqlDataSource>
 
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MatID" DataSourceID="SqlDataSource1">
+    <asp:FormView 
+        ID="FormView1" 
+        runat="server" 
+        DataKeyNames="MatID" 
+        DataSourceID="SqlDataSource1"
+        AllowPaging="true"
+        GridLines="None"
+        HeaderText="Book Details"
+        CssClass="books"
+        HeaderStyle-CssClass="header"
+        FieldHeaderStyle-CssClass="fieldHeader"
+        AlternatingRowStyle-CssClass="alternating"
+        CommandRowStyle-CssClass="command"
+        PagerStyle-CssClass="pager"
+        >
         
         <EditItemTemplate> 
             

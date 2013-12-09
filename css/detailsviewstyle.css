@@ -1,0 +1,43 @@
+﻿.books td,.books th
+        {
+            padding:10px;
+        }
+        .books
+        {
+            border:double 4px black;
+        }
+        .header
+        {
+            letter-spacing:8px;
+            font:bold 16px Arial,Sans-Serif;
+            background-color:silver;
+        }
+        .fieldHeader
+        {
+            font-weight:bold;
+        }
+        .alternating
+        {
+            background-color:#eeeeee;
+        }
+        .command
+        {
+            background-color:silver;
+        }
+        .command a
+        {
+            color:black;
+            background-color:#eeeeee;
+            font:14px Arials,Sans-Serif;
+            text-decoration:none;
+            padding:3px;
+            border:solid 1px black;
+        }
+        .command a:hover
+        {
+            background-color:yellow;
+        }
+        .pager td
+        {
+            padding:2px;
+        }

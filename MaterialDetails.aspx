@@ -49,7 +49,21 @@
 
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" SelectCommand="SELECT [Availability] FROM [SLPL_MaterialAvailability]"></asp:SqlDataSource>
 
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MatID" DataSourceID="SqlDataSource1">
+    <asp:FormView 
+        ID="FormView1" 
+        runat="server" 
+        DataKeyNames="MatID" 
+        DataSourceID="SqlDataSource1"
+        AllowPaging="true"
+        GridLines="None"
+        HeaderText="Book Details"
+        CssClass="books"
+        HeaderStyle-CssClass="header"
+        FieldHeaderStyle-CssClass="fieldHeader"
+        AlternatingRowStyle-CssClass="alternating"
+        CommandRowStyle-CssClass="command"
+        PagerStyle-CssClass="pager"
+        >
         
         <EditItemTemplate> 
           

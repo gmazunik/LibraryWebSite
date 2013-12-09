@@ -34,12 +34,10 @@
             </LevelMenuItemStyles>      
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
-
-        <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login_red_icon.png" Height="70px" />
-                          
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="70px" ImageUrl="~/images/SignUpHere_Icon.jpg" />
-        
-        </div>
+        <div style="float:right;position:relative;">
+        <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login-button-blue-md.png" LogoutImageUrl="~/images/logout-button-blue-md (1).png" />
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/register-button-blue-md.png" />
+       </div>  </div>
 
 <div id="main" class="big-box">
     <div class="bg-top">
