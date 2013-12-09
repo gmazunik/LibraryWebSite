@@ -81,9 +81,9 @@
         CommandRowStyle-CssClass="command"
         PagerStyle-CssClass="pager"
         >
+
+        <EditItemTemplate > 
         
-        <EditItemTemplate> 
-            
             <table>
                 <tr>
                     <td align="right">MatID:</td><td align="left"><asp:Textbox ID="tb_MatID" runat="server" Enabled="false" Text='<%# Eval("MatID") %>' /></td>
@@ -145,16 +145,27 @@
             <asp:LinkButton ID="UpdateCancelButton" runat="server" CauseValidation="False" CommandName="Cancel" Text="Cancel" />
                       
         </EditItemTemplate>
-
+ 
 
         <InsertItemTemplate>
         </InsertItemTemplate>
 
 
-
         <ItemTemplate>
-            
-            <table>
+            <asp:DataList ID="MaterialPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
+        <ItemTemplate>
+	      <a href='<%# Eval("PhotoName", "../Materials/{0}")%>' target="_blank">  
+	
+	            <asp:Image ID="MaterialImage1" runat="server"
+	            ImageURL='<%# Eval("PhotoName", "../Materials/{0}")%>'
+	            Height="200px"
+	            AlternateText='<%# Eval ("Title") %>'
+	            ToolTip='<%# Eval ("Title") %>' />
+	       </a>
+	    </ItemTemplate>
+     </asp:DataList>
+
+            <table >
                 <tr>
                     <td align="right">MatID:</td><td align="left"><asp:Label ID="lbl_MatID" runat="server" Text='<%# Eval("MatID") %>' /></td>
                 </tr>
@@ -207,6 +218,7 @@
     <br />
     <br />
     <br />
+
     <asp:GridView 
         ID="GridView1" 
         runat="server" 
@@ -219,43 +231,28 @@
         PagerStyle-CssClass="pgr"
         AllowPaging="True" 
         AllowSorting="True" 
-        alternatingrowstyle-CssClass="alt" Width="795px"
+        alternatingrowstyle-CssClass="alt" Width="611px"
+        
         >
+<AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
         <Columns>
-            <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
             <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
             <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
             <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
             <asp:BoundField DataField="Address1" HeaderText="Address1" SortExpression="Address1" />
-            <asp:BoundField DataField="Address2" HeaderText="Address2" SortExpression="Address2" />
             <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
             <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
             <asp:BoundField DataField="Zip" HeaderText="Zip" SortExpression="Zip" />
-            <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
-            <asp:BoundField DataField="PhoneNumber1" HeaderText="PhoneNumber1" SortExpression="PhoneNumber1" />
-            <asp:BoundField DataField="PrimaryEmail" HeaderText="PrimaryEmail" SortExpression="PrimaryEmail" />
         </Columns>
+
+<HeaderStyle CssClass="header"></HeaderStyle>
+
+<PagerStyle CssClass="pgr"></PagerStyle>
     </asp:GridView>
 
     <br /><br />
 
-      <asp:DataList ID="MaterialPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
-	    
-        <ItemTemplate>
 
-	      <a href='<%# Eval("PhotoName", "../Materials/{0}")%>' target="_blank">  
-	
-	            <asp:Image ID="MaterialImage1" runat="server"
-	            ImageURL='<%# Eval("PhotoName", "../Materials/{0}")%>'
-	            Height="200px"
-	            AlternateText='<%# Eval ("Title") %>'
-	            ToolTip='<%# Eval ("Title") %>' />
-
-	       </a>
-
-	    </ItemTemplate>
-	
-     </asp:DataList>
     <asp:Label ID="lbl_DeletedMaterial" runat="server" Text=""></asp:Label>
 
 </asp:Content>

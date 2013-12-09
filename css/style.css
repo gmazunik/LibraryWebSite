@@ -76,6 +76,8 @@ h4 {
 #shell {
 	width:964px;
 	margin:0 auto;
+
+    
 }
 .big-box {
 	background:url(images/big-box-middle.gif) repeat-y;
@@ -376,8 +378,6 @@ h4 {
 }
 .text-block {
 	padding-left:12px;
-
-    
 }
 .box {
 	float:left;
