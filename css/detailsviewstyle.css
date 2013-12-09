@@ -1,10 +1,14 @@
 ﻿.books td,.books th
         {
             padding:10px;
+        
+
         }
         .books
         {
             border:double 4px black;
+            text-align:center;  
+            margin:0 auto;
         }
         .header
         {

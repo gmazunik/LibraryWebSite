@@ -76,7 +76,15 @@
 
 
         <ItemTemplate>
-            
+                <asp:DataList ID="MaterialPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
+        <ItemTemplate >
+	            <asp:Image ID="MaterialImage1" style="border:2px solid black;text-align:center;margin:0 auto; ;" runat="server"
+	            ImageURL='<%# Eval("PhotoName", "~/Materials/{0}")%>'
+	            Height="200px"
+	            AlternateText='<%# Eval ("Title") %>'
+	            ToolTip='<%# Eval ("Title") %>' />
+	    </ItemTemplate>
+     </asp:DataList>
             <table>
                 <tr>
                     <td align="right">MatID:</td><td align="left"><asp:Label ID="lbl_MatID" runat="server" Text='<%# Eval("MatID") %>' /></td>
@@ -123,24 +131,8 @@
     </asp:FormView>
 
     <br /><br />
-      
-     <asp:DataList ID="MaterialPhotoDataList" runat="server" DataSourceID="SQLDataSource1">
-	    
-        <ItemTemplate>
-
-	     
-	
-	            <asp:Image ID="MaterialImage1" runat="server"
-	            ImageURL='<%# Eval("PhotoName", "~/Materials/{0}")%>'
-	            Height="200px"
-	            AlternateText='<%# Eval ("Title") %>'
-	            ToolTip='<%# Eval ("Title") %>' />
-
-	     
-
-	    </ItemTemplate>
-	
-     </asp:DataList>
+    <div id="detailphoto"></div>  
+ 
 
     <asp:Label ID="lbl_DeletedMaterial" runat="server" Text=""></asp:Label>
 

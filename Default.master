@@ -86,18 +86,9 @@
             </asp:ContentPlaceHolder>
 
           <div id="content"class="box">
-            <h3>All materials in circulation:</h3>
-
-              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>" 
-                  SelectCommand="SELECT * FROM [SLPL_Materials]"></asp:SqlDataSource>
-              <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
-                  <ItemTemplate>
-
-                      <asp:Image ID="Photo" runat="server" Height="150px" ImageUrl='<%# "~/Materials/" + Eval("PhotoName")%>' />
-                  </ItemTemplate>
-
-              </asp:Repeater>
-
+            <h3>Consectetur elit</h3>
+            <p>Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. Pellentesque tincidunt fermentum diam sagittis ullamcorper.</p>
+            <p>Cras aliquet tellus sed dolor aliquet condimentum &hellip; <a href="#">read more</a></p>
           </div>   
 
           <div  class="box last">

@@ -27,13 +27,13 @@ letter-spacing: 0.1em;
 
 .cssgridview {
 background: #acc;
-
 width: 100%;
 }
 .cssgridview td {
 font-size: 100%;
 letter-spacing: 0.05em;
 }
+
 .cssgridview td, th {
 border-bottom: 4px solid #fff;
 border-left: 1px dotted #fff;
@@ -52,9 +52,7 @@ text-transform: uppercase;
 letter-spacing: 0.2em;
 font-weight: bold;
 font-size: 110%
-
 }
-
 
 .cssgridview th { 
 padding: 10px 10px 10px 10px;
