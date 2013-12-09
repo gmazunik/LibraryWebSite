@@ -3,56 +3,81 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="stylesheet" type="text/css" href="~/css/librarystyle.css" />
-    <link rel="stylesheet" type="text/css" href="~/css/gridviewstyle.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="css/gridviewstyle.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.1.js"></script>
+    <script type="text/javascript" src="js/jquery-func.js"></script>
 </head>
-
 
 <body>
     <form id="form1" runat="server">
-      <div id="pagewrap">
+      <div id="shell">
+        <div id="header" class="big-box">
+          <h1 style="padding-top:30px;padding-left:20px; font-size:36pt;">South Liberty Public Library</h1>
+           <div class="bg-bottom">
+              <asp:Image class="logo" ID="Image1" runat="server"  ImageUrl="~/SLPL Logo/SLPL_logo.png" />
+               <div class="cl">&nbsp;</div>
+           </div>
+         </div>
 
-        <div id="header"> 
-            <h1>South Liberty Public Library</h1>
-            <asp:Image class="hdr_img" ID="Image1" runat="server" ImageUrl="~/SLPL Logo/SLPL_logo.png" />
-        </div>
-
-        <div id="menu">
-        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" >
+        <div id="navigation">
+        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" > 
             <LevelMenuItemStyles>
-                <asp:MenuItemStyle CssClass="menu" />
-            </LevelMenuItemStyles>          
+                <asp:MenuItemStyle CssClass="navigation" />
+            </LevelMenuItemStyles>      
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
-        </div> 
-              
-       <div id="searchdate">
-           <div id="date">
-            <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
-           </div>  
-           
-        </div>    
-
-        <div id="content">
-            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-
-                <p>
-                    <br />
-                </p>
-                <p>
-                </p>
-
-            </asp:ContentPlaceHolder>
-        </div>  
-
-        <div id="footer">
-             <h4>Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> South Liberty Public Library</h4>
         </div>
 
+<div id="main" class="big-box">
+    <div class="bg-top">
+      <div class="bg-bottom">
+        <div id="top" class="text-block">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        <div class="cl">&nbsp;</div>
+        </div>
+        <div class="cl">&nbsp;</div>
+          </div>
+        </div>
+        <div id="bottom" class="text-block">
+          <div class="box">
+            <h3>Members</h3>
+            <p></p>
+            <p></p>
+          </div>
+          <div class="box">
+            <h3>About</h3>
+            <p>The South Liberty Public Library (SLPL) was established in 1896 to serve the people of South Liberty, Iowa, USA.  </p>
+            <p>The idea to establish a library, to provide a room for reading and games for the local young people, came about in 1896, when South Liberty had already existed for fifty-seven years.</p>
+          </div>
+          <div class="box last">
+            <h3>Contact</h3>
+            <p>Iowa City Public Library</p>
+                123 South Linn St.,
+                Iowa City, IA 52240
+                319.356.5200 (phone)
+                <br />319.356.5494 (fax)
+            <p></p>
+          </div> 
+          <div class="cl">&nbsp;</div>
+        </div>
+      </div>
+
+        <div id="footer">
+                 <p class="left">Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> South Liberty Public Library</p>
+        <p class="right"> <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label></p>
+            <div class="cl">&nbsp;</div>
+        </div>    
       </div>
     </form>
 </body>

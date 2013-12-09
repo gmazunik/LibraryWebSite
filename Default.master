@@ -8,6 +8,7 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/gridviewstyle.css" type="text/css" media="all" />
     <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
@@ -19,6 +20,7 @@
     <form id="form1" runat="server">
       <div id="shell">
         <div id="header" class="big-box">
+         <h1 style="padding-top:30px;padding-left:20px;font-size:36pt;">South Liberty Public Library</h1>
            <div class="bg-bottom">
               <asp:Image class="logo" ID="Image1" runat="server"  ImageUrl="~/SLPL Logo/SLPL_logo.png" />
               <div id="search">
@@ -46,7 +48,7 @@
           <div class="slider-holder">
             <ul>
               <li>
-                <div class="image"> <img src="Materials/MarioKart.jpg" alt="" /> </div>
+                <div class="image"> <img src="Materials/Mystery_Alaska.jpg" alt="" /> </div>
                 <div class="data">
                   <h2>Mystery Alaska</h2>
                   <p>Mystery, Alaska is a 1999 comedy-drama film directed by Jay Roach about a local ice hockey team, </p>
@@ -54,19 +56,19 @@
                 </div>
               </li>
               <li>
-                <div class="image"> <img src="Materials/Over_the_Hedge_2.jpg" alt="" /> </div>
+                <div class="image"> <img src="Materials/MarioKart.jpg" alt="" /> </div>
                 <div class="data">
-                  <h2>Lawn Boy</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet lacus at metus accumsan porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ligula ut dui adipiscing commodo.</p>
-                  <p>Cras aliquet tellus sed dolor aliquet condimentum. Quisque in ligula orci &hellip; <a href="#">read more</a></p>
+                  <h2>Mario Kart</h2>
+                  <p>Mario and his friends are back and ready to race once again in Mario Kart Wii! Experience new tracks, enhanced Wii graphics, extraordinary gameplay and much more!</p>
+                  <p>Place first in Grand Prix circuits or clear skill-based missions to open up increasingly difficult and thrilling circuits. Players can have multiplayer races on any open courses or battle in arenas.<a href="#">read more</a></p>
                 </div>
               </li>
               <li>
                 <div class="image"> <img src="Materials/Travels_to_the_Edge.jpg" alt="" /> </div>
                 <div class="data">
                   <h2>Travels to the Edge</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet lacus at metus accumsan porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ligula ut dui adipiscing commodo.</p>
-                  <p>Cras aliquet tellus sed dolor aliquet condimentum. Quisque in ligula orci &hellip; <a href="#">read more</a></p>
+                  <p>A selection of some of the most adventurous and stunning imagery from a great photographer.</p>
+                  <p>Inspirational for those who seek to travel and explore our beautiful planet, Landscapes, wildlife, and cultures of Alaska, Bolivia, Ethiopia, India, Kenya, Madagascar, Patagonia, Peru, South Georgia Island, the Southwest (US), and beyond Revel in the beauty of awe-inspiring landscapes and the unique animals and people that inhabit them as captured through an artist's lens in Travels to the Edge, the newest book from internationally acclaimed photographer Art Wolfe. <a href="#">read more</a></p>
                 </div>
               </li>
             </ul>
@@ -98,18 +100,22 @@
         <div id="bottom" class="text-block">
           <div class="box">
             <h3>Members</h3>
-            <p>Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. Pellentesque tincidunt fermentum diam sagittis ullamcorper.</p>
-            <p>Cras aliquet tellus sed dolor aliquet condimentum &hellip; </p>
+            <p></p>
+            <p></p>
           </div>
           <div class="box">
             <h3>About</h3>
-            <p>Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. Pellentesque tincidunt fermentum diam sagittis ullamcorper.</p>
-            <p>Cras aliquet tellus sed dolor aliquet condimentum &hellip; </p>
+            <p>The South Liberty Public Library (SLPL) was established in 1896 to serve the people of South Liberty, Iowa, USA.  </p>
+            <p>The idea to establish a library, to provide a room for reading and games for the local young people, came about in 1896, when South Liberty had already existed for fifty-seven years.</p>
           </div>
           <div class="box last">
             <h3>Contact</h3>
-            <p>Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. Pellentesque tincidunt fermentum diam sagittis ullamcorper.</p>
-            <p>Cras aliquet tellus sed dolor aliquet condimentum &hellip; </p>
+            <p>Iowa City Public Library</p>
+                123 South Linn St.,
+                Iowa City, IA 52240
+                319.356.5200 (phone)
+                <br />319.356.5494 (fax)
+            <p></p>
           </div> 
           <div class="cl">&nbsp;</div>
         </div>

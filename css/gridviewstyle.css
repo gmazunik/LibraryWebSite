@@ -1,7 +1,11 @@
 ﻿.cssgridview {
 font: 75%/1.5em arial, geneva, sans-serif;
 border-collapse: collapse;
-
+width:100%;
+align-items:center;
+text-align:center;  margin:auto;
+overflow:hidden;
+margin-bottom:10px;
 }
 	
 /* headline */
@@ -10,20 +14,20 @@ border-collapse: collapse;
 margin: 0;
 border-bottom: 4px solid #fff;
 padding: 10px;
-background: #F8F12A;
 text-align: center;
-font: bold 250%/1em arial, geneva, sans-serif;
+font: bold 200%/1em arial, geneva, sans-serif;
 color: #000;
 width: 100%;
 text-transform: uppercase;
 letter-spacing: 0.1em;
-width: auto;
+
 }	
 	
 /* data */
 
 .cssgridview {
 background: #acc;
+width: 100%;
 }
 .cssgridview td {
 font-size: 100%;
@@ -41,12 +45,13 @@ padding: 10px;
 .cssgridview .header th { /* headers oben */
 padding: 5px 10px;
 text-align: left;
-background: #DF3985; /* pink */
+background: #ffb6c1; /* pink */
 color: #fff;
 text-transform: uppercase;
 letter-spacing: 0.2em;
 font-weight: bold;
 font-size: 110%
+
 }
 
 
@@ -83,8 +88,9 @@ margin: 0;
 border-top: 2px solid #fff;
 padding: 5px 10px;
 text-align: left;
-background: #F8F12A; /* yellow */
+background-color:white;
 color:#277ffe;
+width: auto;
 }
 
 .cssgridview .pgr th {
@@ -115,4 +121,4 @@ color: #DF3985;
 
 a:visited, .cssgridview tr.alt th a:visited {
 color: #999;
-}t td, .cssgridview .pgr th, .cssgridview .pgr tr {text-align: left; font: 120%  "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif; text-transform: uppercase; background: #fff; padding: 10px;}
+}t td, .cssgridview .pgr th, .cssgridview .pgr tr {text-align: left; font: 120%  "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", sans-serif; text-transform: uppercase;  padding: 10px;}

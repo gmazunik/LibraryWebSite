@@ -25,6 +25,8 @@
     alternatingrowstyle-CssClass="alt" Width="795px"
     >
 <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
+<HeaderStyle CssClass="header"></HeaderStyle>
+<PagerStyle CssClass="pgr"></PagerStyle>
     <Columns>
         <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
         <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
@@ -33,9 +35,6 @@
         <asp:HyperLinkField DataNavigateUrlFields="MatID" DataNavigateUrlFormatString="MaterialDetails.aspx?MatID={0}" Text="Select" />
     </Columns>
 
-<HeaderStyle CssClass="header"></HeaderStyle>
-
-<PagerStyle CssClass="pgr"></PagerStyle>
 </asp:GridView>
 </asp:Content>
 

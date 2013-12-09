@@ -86,6 +86,7 @@ h4 {
 }
 .big-box .bg-bottom {
 	background:url(images/big-box-bottom.gif) bottom no-repeat;
+
 }
 .big-box .bg-bottom {
 	padding:20px;
@@ -369,10 +370,13 @@ h4 {
 	left:-4px;
 }
 #main .bg-bottom {
-	padding-bottom:0;
+	padding-bottom:15px;
+
 }
 .text-block {
 	padding-left:12px;
+
+    
 }
 .box {
 	float:left;
