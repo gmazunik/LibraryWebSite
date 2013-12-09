@@ -18,5 +18,11 @@
         Response.Redirect(url)
 
     End Sub
+
+    Protected Sub ImageButton1_Click(sender As Object, e As ImageClickEventArgs) Handles ImageButton1.Click
+
+        Response.Redirect("AddPatron.aspx")
+
+    End Sub
 End Class
 

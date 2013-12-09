@@ -33,13 +33,18 @@
          </div>
 
         <div id="navigation">
-        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+        
         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" > 
             <LevelMenuItemStyles>
                 <asp:MenuItemStyle CssClass="navigation" />
             </LevelMenuItemStyles>      
         </asp:Menu>
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
+
+        <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login_red_icon.png" Height="70px" />
+                       
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="70px" ImageUrl="~/images/SignUpHere_Icon.jpg" />
+        
         </div>
 
 <div id="main" class="big-box">
