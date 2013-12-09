@@ -30,7 +30,7 @@
 
         <div id="menu">
 
-        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+        <asp:LoginStatus ID="LoginStatus1" runat="server" Height="80px" LoginImageUrl="~/images/login_red_icon.png" />
 
         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" >
             <LevelMenuItemStyles>

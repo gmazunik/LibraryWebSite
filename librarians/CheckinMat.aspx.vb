@@ -5,6 +5,7 @@ Partial Class librarians_CheckinMat
 
     Protected Sub btn_Checkin_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_Checkin.Click
 
+
         Dim strMatID As String = tb_MatID.Text
 
         Dim sqlConn As New SqlConnection(ConfigurationManager.ConnectionStrings("cs_SLPL").ConnectionString)
@@ -22,6 +23,13 @@ Partial Class librarians_CheckinMat
         sqlCmd.ExecuteNonQuery()
         sqlConn.Close()
 
+        Response.Redirect("ViewAllMaterials.aspx")
+
+
     End Sub
 
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        tb_MatID.Focus()
+
+    End Sub
 End Class

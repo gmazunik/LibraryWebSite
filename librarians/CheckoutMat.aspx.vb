@@ -29,6 +29,12 @@ Partial Class librarians_RentMat
 
         Response.Redirect("ViewAllCheckouts.aspx")
 
+
+
     End Sub
 
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        tb_UserName.Focus()
+
+    End Sub
 End Class

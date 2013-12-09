@@ -6,7 +6,7 @@ Partial Class librarians_ViewAllPatrons
 
         Dim searchword As String
 
-        searchword = " Select * From SLPL_UserProfile where ( FirstName Like '%" + tb_search.Text + "%') OR ( LastName Like '%" + tb_search.Text + "%')"
+        searchword = " Select * From SLPL_UserProfile where ( FirstName Like '%" + tb_search.Text + "%') OR ( LastName Like '%" + tb_search.Text + "%') OR (PhoneNumber Like '%" + tb_search.Text + "%') OR (PhoneNumber1 Like '%" + tb_search.Text + "%') OR ( PrimaryEmail Like '%" + tb_search.Text + "%')"
         SqlDataSource1.SelectCommand = searchword
 
     End Sub

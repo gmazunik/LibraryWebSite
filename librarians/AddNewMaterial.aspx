@@ -71,31 +71,44 @@
                         <asp:DropDownList ID="ddl_MaterialType" runat="server" DataSourceID="SqlDataSource2"
                             DataTextField="MatType" DataValueField="MatType" SelectedValue='<%# Bind("Type")%>'>                            
                         </asp:DropDownList>                      
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddl_MaterialType" ErrorMessage="*"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
 
                 <tr>
-                    <td align="right">CallNumber:</td><td align="left"><asp:Textbox ID="tb_CallNumber" runat="server" Text='<%# Bind("CallNumber") %>' /></td>
+                    <td align="right">CallNumber:</td><td align="left"><asp:Textbox ID="tb_CallNumber" runat="server" Text='<%# Bind("CallNumber") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tb_CallNumber" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td align="right">Title:</td><td align="left"><asp:Textbox ID="tb_Title" runat="server" Text='<%# Bind("Title") %>' /></td>
+                    <td align="right">Title:</td><td align="left"><asp:Textbox ID="tb_Title" runat="server" Text='<%# Bind("Title") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tb_Title" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td align="right">Author:</td><td align="left"><asp:Textbox ID="tb_Author" runat="server" Text='<%# Bind("Author") %>' /></td>
+                    <td align="right">Author:</td><td align="left"><asp:Textbox ID="tb_Author" runat="server" Text='<%# Bind("Author") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="tb_Author" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                     
                 <tr>
-                    <td align="right">Publisher:</td><td align="left"><asp:Textbox ID="tb_Publisher" runat="server" Text='<%# Bind("Publisher") %>' /></td>
+                    <td align="right">Publisher:</td><td align="left"><asp:Textbox ID="tb_Publisher" runat="server" Text='<%# Bind("Publisher") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="tb_Publisher" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td align="right">Year:</td><td align="left"><asp:Textbox ID="tb_Year" runat="server" Text='<%# Bind("Year") %>' /></td>
+                    <td align="right">Year:</td><td align="left"><asp:Textbox ID="tb_Year" runat="server" Text='<%# Bind("Year") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="tb_Year" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
 
                 <tr> 
-                   <td align="right">ISBN:</td><td align="left"><asp:Textbox ID="tb_ISBN" runat="server" Text='<%# Bind("ISBN") %>' /></td>
+                   <td align="right">ISBN:</td><td align="left"><asp:Textbox ID="tb_ISBN" runat="server" Text='<%# Bind("ISBN") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="tb_ISBN" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
 
                 <tr> 
@@ -108,6 +121,7 @@
                         <asp:DropDownList ID="ddl_Availability" runat="server" DataSourceID="SqlDataSource3"
                             DataTextField="Availability" DataValueField="Availability" SelectedValue='<%# Bind("Avail")%>'>                            
                         </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddl_Availability" ErrorMessage="*"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table> 

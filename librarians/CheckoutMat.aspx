@@ -5,10 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     Username:  <asp:TextBox ID="tb_UserName" runat="server"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tb_UserName" ErrorMessage="Please enter a valid username"></asp:RequiredFieldValidator>
     <br />
     <br />
 
     Material ID:    <asp:TextBox ID="tb_MatID" runat="server"></asp:TextBox>
+
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tb_MatID" ErrorMessage="Please enter a valid material ID"></asp:RequiredFieldValidator>
 
     <br />
     <br />
