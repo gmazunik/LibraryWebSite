@@ -86,10 +86,20 @@
             </asp:ContentPlaceHolder>
 
           <div id="content"class="box">
-            <h3>Consectetur elit</h3>
-            <p>Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. Pellentesque tincidunt fermentum diam sagittis ullamcorper.</p>
-            <p>Cras aliquet tellus sed dolor aliquet condimentum &hellip; <a href="#">read more</a></p>
-          </div>   
+            <h3>All Materials</h3>
+            <br />
+              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>"
+                  SelectCommand="SELECT * FROM [SLPL_Materials]"></asp:SqlDataSource>
+              <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" >                
+                  <ItemTemplate>
+                  
+                    <asp:Image ID="Image2" runat="server" height=150px ImageURL='<%# "~/Materials/" + Eval("PhotoName")%>' />
+                  </ItemTemplate>
+              </asp:Repeater>                  
+                  
+          <br />
+          </div>  
+ 
 
           <div  class="box last">
             <a class="twitter-timeline" href="https://twitter.com/SDD_Group2" data-widget-id="407216211865264128">Tweets by @SDD_Group2</a>
