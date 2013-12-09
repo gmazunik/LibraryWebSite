@@ -22,16 +22,16 @@ Partial Class patrons_PatronProfile
 
     End Sub
 
-    Protected Sub FormView1_ItemDeleted(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewDeletedEventArgs)
+    Protected Sub FormView1_ItemDeleted(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewDeletedEventArgs) Handles FormView1.ItemDeleted
         Dim delPatron As String = e.Values("FirstName").ToString()
 
-        lbl_DeletedUser.Text = "The record" & delPatron & "has been deleted."
+        lbl_DeletedUser.Text = "The record " & delPatron & " has been deleted."
 
         Response.AddHeader("REFRESH", "3;URL=~/default.aspx")
 
     End Sub
 
-    Protected Sub FormView1_ItemUpdated(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewUpdatedEventArgs)
+    Protected Sub FormView1_ItemUpdated(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.FormViewUpdatedEventArgs) Handles FormView1.ItemUpdated
 
         Response.Redirect("PatronProfile.aspx")
 

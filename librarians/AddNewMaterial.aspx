@@ -56,7 +56,22 @@
     </asp:SqlDataSource>
 
 
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MatID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+    <asp:FormView ID="FormView1" 
+        runat="server" 
+        DataKeyNames="MatID" 
+        DataSourceID="SqlDataSource1" 
+        DefaultMode="Insert"
+        AllowPaging="true"
+        GridLines="None"
+        HeaderText="Book Details"
+        CssClass="books"
+        HeaderStyle-CssClass="header"
+        FieldHeaderStyle-CssClass="fieldHeader"
+        AlternatingRowStyle-CssClass="alternating"
+        CommandRowStyle-CssClass="command"
+        PagerStyle-CssClass="pager"
+
+        >
         
         <EditItemTemplate>           
         </EditItemTemplate>

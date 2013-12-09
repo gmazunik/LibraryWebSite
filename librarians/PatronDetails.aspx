@@ -5,7 +5,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="UserID" DataSourceID="SqlDataSource2">
+    <asp:FormView 
+        ID="FormView1" 
+        runat="server" 
+        DataKeyNames="UserID" 
+        DataSourceID="SqlDataSource2"
+        AllowPaging="true"
+        GridLines="None"
+        HeaderText="Book Details"
+        CssClass="books"
+        HeaderStyle-CssClass="header"
+        FieldHeaderStyle-CssClass="fieldHeader"
+        AlternatingRowStyle-CssClass="alternating"
+        CommandRowStyle-CssClass="command"
+        PagerStyle-CssClass="pager"
+        >
+        
         
         <EditItemTemplate>
          <table>
@@ -184,7 +199,26 @@
 
     </asp:FormView>
 
-     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MatID" DataSourceID="SqlDataSource3">
+    <br />
+    <br />
+    <br />
+     <asp:GridView 
+         ID="GridView1" 
+         runat="server" 
+         AutoGenerateColumns="False" 
+         DataKeyNames="MatID" 
+         DataSourceID="SqlDataSource3"
+        style="margin-bottom: 0px"
+        Gridlines="None"
+        CssClass="cssgridview"
+        HeaderStyle-CssClass="header"
+        PagerStyle-CssClass="pgr"
+        AllowPaging="True" 
+        AllowSorting="True" 
+        alternatingrowstyle-CssClass="alt" Width="795px"
+        >
+        
+
          <Columns>
              <asp:BoundField DataField="MatID" HeaderText="MatID" InsertVisible="False" ReadOnly="True" SortExpression="MatID" />
              <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
@@ -216,14 +250,14 @@
         <UpdateParameters>
             <asp:Parameter Name="FirstName" Type="String" />
             <asp:Parameter Name="LastName" Type="String" />
-            <asp:Parameter Name="Birthdate" Type="DateTime" />
+            <asp:Parameter Name="Birthdate" Type="String" />
             <asp:Parameter Name="Address1" Type="String" />
             <asp:Parameter Name="Address2" Type="String" />
             <asp:Parameter Name="City" Type="String" />
             <asp:Parameter Name="State" Type="String" />
-            <asp:Parameter Name="Zip" Type="Double" />
-            <asp:Parameter Name="PhoneNumber" Type="Double" />
-            <asp:Parameter Name="PhoneNumber1" Type="Double" />
+            <asp:Parameter Name="Zip" Type="String" />
+            <asp:Parameter Name="PhoneNumber" Type="String" />
+            <asp:Parameter Name="PhoneNumber1" Type="String" />
             <asp:Parameter Name="PrimaryEmail" Type="String" />
             <asp:Parameter Name="UserID" Type="Object" />
         </UpdateParameters>

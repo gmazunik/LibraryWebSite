@@ -6,7 +6,7 @@
   
   <siteMapNode url="~/default.aspx" title="Home"  description="" />
         
-    <siteMapNode url="~/librarians/default.aspx" title="Librarians"  description="" roles="Librarian">
+    <siteMapNode url="" title="Librarians"  description="" roles="Librarian">
         <siteMapNode url="~/librarians/AddNewMaterial.aspx" title="Add Material"  description="" />
         <siteMapNode url="~/librarians/ViewAllMaterials.aspx" title="View All Materials"  description="" />
         <siteMapNode url="~/librarians/AddPatron.aspx" title="Add Patron"  description="" />
@@ -17,7 +17,7 @@
         <siteMapNode url="~/librarians/MaterialsDue.aspx" title="View Due/Overdue Materials"  description="" />
     </siteMapNode>
      
-    <siteMapNode url="~/patrons/default.aspx" title="Patrons"  description="" roles="Patron" >
+    <siteMapNode url="" title="Patrons"  description="" roles="Patron" >
         <siteMapNode url="~/patrons/PatronProfile.aspx" title="My Profile"  description="" />        
     </siteMapNode>
         

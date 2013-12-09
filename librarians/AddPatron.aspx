@@ -70,7 +70,9 @@
 
             </asp:WizardStep>
 
-            <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
+            <asp:CompleteWizardStep ID="CompleteWizardStep1" 
+                runat="server"
+                >
                 <ContentTemplate>
                     <table>
                         <tr>

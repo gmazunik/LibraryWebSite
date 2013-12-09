@@ -204,8 +204,23 @@
 
         </ItemTemplate>
     </asp:FormView>
-
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4">
+    <br />
+    <br />
+    <br />
+    <asp:GridView 
+        ID="GridView1" 
+        runat="server" 
+        AutoGenerateColumns="False" 
+        DataSourceID="SqlDataSource4"
+        style="margin-bottom: 0px"
+        Gridlines="None"
+        CssClass="cssgridview"
+        HeaderStyle-CssClass="header"
+        PagerStyle-CssClass="pgr"
+        AllowPaging="True" 
+        AllowSorting="True" 
+        alternatingrowstyle-CssClass="alt" Width="795px"
+        >
         <Columns>
             <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
             <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />

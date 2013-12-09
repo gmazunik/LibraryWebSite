@@ -7,7 +7,21 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SLPL %>"
             SelectCommand="SELECT [RentalID], [UserName], [MatID], [RentDate], [DateDue] FROM [SLPL_Rentals]">
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RentalID" DataSourceID="SqlDataSource1">
+        <asp:GridView 
+            ID="GridView1" 
+            runat="server" 
+            AutoGenerateColumns="False" 
+            DataKeyNames="RentalID" 
+            DataSourceID="SqlDataSource1"
+            style="margin-bottom: 0px"
+            Gridlines="None"
+            CssClass="cssgridview"
+            HeaderStyle-CssClass="header"
+            PagerStyle-CssClass="pgr"
+            AllowPaging="True" 
+            AllowSorting="True" 
+            alternatingrowstyle-CssClass="alt" Width="795px"
+            >
             <Columns>
                 <asp:BoundField DataField="RentalID" HeaderText="RentalID" SortExpression="RentalID" InsertVisible="False" ReadOnly="True" />
                 <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
