@@ -56,7 +56,7 @@
                 <div class="data">
                   <h2>Mystery Alaska</h2>
                   <p>Mystery, Alaska is a 1999 comedy-drama film directed by Jay Roach about a local ice hockey team, </p>
-                  <p>from the fictional small-town of Mystery, that plays an exhibition game against the New York Rangers of the National Hockey League.<a href="http://instruct.biz.uiowa.edu/courses/6K183/6K183_group02/SLPL/MaterialDetails.aspx?MatID=15">read more</a></p>
+                  <p>from the fictional small-town of Mystery, that plays an exhibition game against the New York Rangers of the National Hockey League.<a href="MaterialDetails.aspx?MatID=15">read more</a></p>
                 </div>
               </li>
               <li>
@@ -64,7 +64,7 @@
                 <div class="data">
                   <h2>Mario Kart</h2>
                   <p>Mario and his friends are back and ready to race once again in Mario Kart Wii! Experience new tracks, enhanced Wii graphics, extraordinary gameplay and much more!</p>
-                  <p>Place first in Grand Prix circuits or clear skill-based missions to open up increasingly difficult and thrilling circuits. Players can have multiplayer races on any open courses or battle in arenas.<a href="http://instruct.biz.uiowa.edu/courses/6K183/6K183_group02/SLPL/MaterialDetails.aspx?MatID=20">read more</a></p>
+                  <p>Place first in Grand Prix circuits or clear skill-based missions to open up increasingly difficult and thrilling circuits. Players can have multiplayer races on any open courses or battle in arenas.<a href="MaterialDetails.aspx?MatID=20">read more</a></p>
                 </div>
               </li>
               <li>
@@ -72,7 +72,7 @@
                 <div class="data" >
                   <h2>Travels to the Edge</h2>
                   <p>A selection of some of the most adventurous and stunning imagery from a great photographer.</p>
-                  <p>Inspirational for those who seek to travel and explore our beautiful planet, Landscapes, wildlife, and cultures of Alaska, Bolivia, Ethiopia, India, Kenya, Madagascar, Patagonia, Peru, South Georgia Island, the Southwest (US), and beyond Revel in the beauty of awe-inspiring landscapes and the unique animals and people that inhabit them as captured through an artist's lens in Travels to the Edge, the newest book from internationally acclaimed photographer Art Wolfe. <a href="http://instruct.biz.uiowa.edu/courses/6K183/6K183_group02/SLPL/MaterialDetails.aspx?MatID=12">read more</a></p>
+                  <p>Inspirational for those who seek to travel and explore our beautiful planet, Landscapes, wildlife, and cultures of Alaska, Bolivia, Ethiopia, India, Kenya, Madagascar, Patagonia, Peru, South Georgia Island, the Southwest (US), and beyond Revel in the beauty of awe-inspiring landscapes and the unique animals and people that inhabit them as captured through an artist's lens in Travels to the Edge, the newest book from internationally acclaimed photographer Art Wolfe. <a href="MaterialDetails.aspx?MatID=12">read more</a></p>
                 </div>
               </li>
             </ul>
@@ -93,7 +93,7 @@
               <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" >                
                   <ItemTemplate>
                   
-                    <asp:Image ID="Image2" runat="server" height=150px ImageURL='<%# "~/Materials/" + Eval("PhotoName")%>' />
+                    <asp:Image ID="Image2" runat="server" style="height:150px;" ImageURL='<%# "~/Materials/" + Eval("PhotoName")%>' />
                   </ItemTemplate>
               </asp:Repeater>                  
                   
