@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" action="#">
       <div id="shell">
         <div id="header" class="big-box">
          <h1 style="padding-top:30px;padding-left:20px;font-size:36pt;">South Liberty Public Library</h1>
            <div class="bg-bottom">
-              <asp:Image class="logo" ID="Image1" runat="server"  ImageUrl="~/SLPL Logo/SLPL_logo.png" />
+              <asp:Image class="logo" ID="Image1" runat="server"  ImageUrl="~/SLPL Logo/SLPL_logo.png" alt="Feed Your Brain" />
               <div id="search">
                  <asp:TextBox ID="tb_search" runat="server" class="field"></asp:TextBox>
                  <asp:Button ID="btn_search" runat="server" Text="Search" class="submit"/>
@@ -41,7 +41,7 @@
         
           <div style="float:right;position:relative;">
         <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login-button-blue-md.png" LogoutImageUrl="~/images/logout-button-blue-md (1).png" />
-        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/register-button-blue-md.png" />
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/register-button-blue-md.png" alt="Register" />
        </div> </div>
         
 
@@ -85,7 +85,7 @@
 
             </asp:ContentPlaceHolder>
 
-          <div id="content"class="box">
+          <div id="content" class="box">
             <h3>All Materials</h3>
               <asp:Label ID="Label1" runat="server" Text="Total Available Materials in Circulation: "></asp:Label><asp:Label ID="lbl_RecordCount" runat="server" Text="Label"></asp:Label>
             <br />
@@ -94,7 +94,7 @@
               <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" >                
                   <ItemTemplate>
                   
-                    <asp:Image ID="Image2" runat="server" height=150px ImageURL='<%# "~/Materials/" + Eval("PhotoName")%>' />
+                    <asp:Image ID="Image2" runat="server" height="150px" ImageURL='<%# "~/Materials/" + Eval("PhotoName")%>' alt="" />
                   </ItemTemplate>
               </asp:Repeater>                  
                   
@@ -102,7 +102,7 @@
           </div>  
  
 
-          <div  class="box last">
+          <div class="box last">
             <a class="twitter-timeline" href="https://twitter.com/SDD_Group2" data-widget-id="407216211865264128">Tweets by @SDD_Group2</a>
                 <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
           </div>

@@ -23,7 +23,7 @@
         <div id="header" class="big-box"> 
             <h1 style="padding-top:30px;padding-left:20px;font-size:36pt;">South Liberty Public Library</h1>
            <div class="bg-bottom">
-              <asp:Image class="logo" ID="Image1" runat="server"  ImageUrl="~/SLPL Logo/SLPL_logo.png" />
+              <asp:Image class="logo" ID="Image1" runat="server"  ImageUrl="~/SLPL Logo/SLPL_logo.png" alt="" />
               
               <div id="search">
                  <asp:TextBox ID="tb_search" runat="server" class="field"></asp:TextBox>
@@ -43,8 +43,8 @@
 	    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
        
         <div style="float:right;position:relative;">
-        <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login-button-blue-md.png" LogoutImageUrl="~/images/logout-button-blue-md (1).png" />
-        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/register-button-blue-md.png" />
+        <asp:LoginStatus ID="LoginStatus2" runat="server" LoginImageUrl="~/images/login-button-blue-md.png" LogoutImageUrl="~/images/logout-button-blue-md (1).png" alt="" />
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/register-button-blue-md.png" alt="" />
        </div>  </div>
 
 <div id="main" class="big-box">
